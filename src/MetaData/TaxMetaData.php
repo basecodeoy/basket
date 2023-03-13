@@ -18,8 +18,6 @@ class TaxMetaData implements MetaData
 
     /**
      * TaxMetaData constructor.
-     *
-     * @param  Reconciler  $reconciler
      */
     public function __construct(Reconciler $reconciler)
     {
@@ -27,7 +25,6 @@ class TaxMetaData implements MetaData
     }
 
     /**
-     * @param  Basket  $basket
      * @return Money
      */
     public function generate(Basket $basket)

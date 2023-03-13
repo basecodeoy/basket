@@ -12,7 +12,6 @@ use Symfony\Component\Serializer\Serializer as SymfonySerialiser;
 class XMLTransformer extends AbstractTransformer
 {
     /**
-     * @param  Order  $order
      * @return mixed
      */
     public function transform(Order $order): string

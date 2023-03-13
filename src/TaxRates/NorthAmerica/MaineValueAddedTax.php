@@ -21,17 +21,11 @@ class MaineValueAddedTax implements TaxRate
         $this->rate = 0.055;
     }
 
-    /**
-     * @return float
-     */
     public function float(): float
     {
         return $this->rate;
     }
 
-    /**
-     * @return int
-     */
     public function percentage(): int
     {
         return intval($this->rate * 100);

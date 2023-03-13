@@ -26,7 +26,7 @@ class Illinois implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new IllinoisValueAddedTax;
+        $this->tax = new IllinoisValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Illinois implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

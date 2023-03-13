@@ -26,7 +26,7 @@ class Switzerland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new SwitzerlandValueAddedTax;
+        $this->tax = new SwitzerlandValueAddedTax;
         $this->currency = new Currency('CHF');
     }
 
@@ -38,9 +38,6 @@ class Switzerland implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

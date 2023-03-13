@@ -26,7 +26,7 @@ class Hungary implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new HungaryValueAddedTax;
+        $this->tax = new HungaryValueAddedTax;
         $this->currency = new Currency('HUF');
     }
 
@@ -38,9 +38,6 @@ class Hungary implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

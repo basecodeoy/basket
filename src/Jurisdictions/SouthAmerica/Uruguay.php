@@ -26,7 +26,7 @@ class Uruguay implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new UruguayValueAddedTax;
+        $this->tax = new UruguayValueAddedTax;
         $this->currency = new Currency('UYU');
     }
 
@@ -38,9 +38,6 @@ class Uruguay implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

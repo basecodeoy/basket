@@ -8,10 +8,6 @@ use PreemStudio\Basket\Contracts\Formatter;
 
 class CouponFormatter implements Formatter
 {
-    /**
-     * @param $value
-     * @return array
-     */
     public function format($value): array
     {
         $coupons = [];

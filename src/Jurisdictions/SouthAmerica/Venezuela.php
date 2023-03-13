@@ -26,7 +26,7 @@ class Venezuela implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new VenezuelaValueAddedTax;
+        $this->tax = new VenezuelaValueAddedTax;
         $this->currency = new Currency('VEF');
     }
 
@@ -38,9 +38,6 @@ class Venezuela implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

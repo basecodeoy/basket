@@ -26,7 +26,7 @@ class UnitedKingdom implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new UnitedKingdomValueAddedTax;
+        $this->tax = new UnitedKingdomValueAddedTax;
         $this->currency = new Currency('GBP');
     }
 
@@ -38,9 +38,6 @@ class UnitedKingdom implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

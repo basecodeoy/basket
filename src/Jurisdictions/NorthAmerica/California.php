@@ -26,7 +26,7 @@ class California implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new CaliforniaValueAddedTax;
+        $this->tax = new CaliforniaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class California implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

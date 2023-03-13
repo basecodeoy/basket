@@ -9,7 +9,6 @@ use PreemStudio\Basket\Product;
 interface Category
 {
     /**
-     * @param  Product  $product
      * @return mixed
      */
     public function categorise(Product $product);

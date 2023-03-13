@@ -26,7 +26,7 @@ class Vermont implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new VermontValueAddedTax;
+        $this->tax = new VermontValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Vermont implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

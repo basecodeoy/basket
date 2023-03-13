@@ -26,7 +26,7 @@ class Massachusetts implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new MassachusettsValueAddedTax;
+        $this->tax = new MassachusettsValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Massachusetts implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

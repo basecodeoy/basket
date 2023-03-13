@@ -26,7 +26,7 @@ class Florida implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new FloridaValueAddedTax;
+        $this->tax = new FloridaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Florida implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

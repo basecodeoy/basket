@@ -14,9 +14,6 @@ use PreemStudio\Basket\Discounts\ValueDiscount;
 trait ApplyDiscount
 {
     /**
-     * @param  Basket  $basket
-     * @param  Discount  $discount
-     * @param  Money  $total
      * @return Money
      */
     public function calculateTotalDiscount(Basket $basket, Discount $discount, Money $total)
@@ -57,7 +54,6 @@ trait ApplyDiscount
     }
 
     /**
-     * @param  Basket  $basket
      * @param  Basket  $discount
      * @return Money
      */
@@ -106,21 +102,11 @@ trait ApplyDiscount
         return $total;
     }
 
-    /**
-     * @param  Money  $total
-     * @param  Discount  $discount
-     * @return Money
-     */
     protected function subtractValueDiscount(Money $total, Discount $discount): Money
     {
         return $total->subtract($discount->rate());
     }
 
-    /**
-     * @param  Money  $total
-     * @param  Discount  $discount
-     * @return Money
-     */
     protected function subtractPercentageDiscount(Money $total, Discount $discount): Money
     {
         return $total->subtract($total->multiply($discount->rate()->int() / 100));

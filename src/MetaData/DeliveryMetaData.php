@@ -18,8 +18,6 @@ class DeliveryMetaData implements MetaData
 
     /**
      * DeliveryMetaData constructor.
-     *
-     * @param  Reconciler  $reconciler
      */
     public function __construct(Reconciler $reconciler)
     {
@@ -27,7 +25,6 @@ class DeliveryMetaData implements MetaData
     }
 
     /**
-     * @param  Basket  $basket
      * @return Money
      */
     public function generate(Basket $basket)

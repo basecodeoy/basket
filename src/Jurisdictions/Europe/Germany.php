@@ -26,7 +26,7 @@ class Germany implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new GermanyValueAddedTax;
+        $this->tax = new GermanyValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 
@@ -38,9 +38,6 @@ class Germany implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

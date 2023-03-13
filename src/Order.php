@@ -26,13 +26,11 @@ class Order
     /**
      * Order constructor.
      *
-     * @param  array  $meta
-     * @param  array  $products
      * @param  Money\Money  $delivery
      */
     public function __construct(array $meta, array $products, ?Money $delivery)
     {
-        $this->meta     = $meta;
+        $this->meta = $meta;
         $this->products = $products;
         $this->delivery = $delivery;
     }

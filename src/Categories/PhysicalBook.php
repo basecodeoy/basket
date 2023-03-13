@@ -9,9 +9,6 @@ use PreemStudio\Basket\Product;
 
 class PhysicalBook implements Category
 {
-    /**
-     * @param  Product  $product
-     */
     public function categorise(Product $product)
     {
         $product->taxable(false);

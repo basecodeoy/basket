@@ -10,10 +10,6 @@ use PreemStudio\Basket\Discounts\ValueDiscount;
 
 class QuantityFormatter implements Formatter
 {
-    /**
-     * @param $value
-     * @return string
-     */
     public function format($value): string
     {
         $value = $value->rate();

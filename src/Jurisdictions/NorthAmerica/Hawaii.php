@@ -26,7 +26,7 @@ class Hawaii implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new HawaiiValueAddedTax;
+        $this->tax = new HawaiiValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Hawaii implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

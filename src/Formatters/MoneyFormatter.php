@@ -18,9 +18,6 @@ class MoneyFormatter implements Formatter
      */
     private $locale;
 
-    /**
-     * @var
-     */
     private static $currencies;
 
     /**
@@ -37,10 +34,6 @@ class MoneyFormatter implements Formatter
         }
     }
 
-    /**
-     * @param $value
-     * @return string
-     */
     public function format($value): string
     {
         $formatter = new NumberFormatter($this->locale(), NumberFormatter::CURRENCY);
@@ -53,9 +46,9 @@ class MoneyFormatter implements Formatter
             $value = $value->rate();
         }
 
-        $code    = $this->code($value);
+        $code = $this->code($value);
         $divisor = $this->divisor($code);
-        $amount  = $this->convert($value, $divisor);
+        $amount = $this->convert($value, $divisor);
 
         return $formatter->formatCurrency($amount, $code);
     }
@@ -73,7 +66,6 @@ class MoneyFormatter implements Formatter
     }
 
     /**
-     * @param  Money  $value
      * @return mixed
      */
     private function code(Money $value): string
@@ -82,7 +74,6 @@ class MoneyFormatter implements Formatter
     }
 
     /**
-     * @param $code
      * @return mixed
      */
     private function divisor($code): int
@@ -91,8 +82,6 @@ class MoneyFormatter implements Formatter
     }
 
     /**
-     * @param  Money  $money
-     * @param $divisor
      * @return string
      */
     private function convert(Money $money, $divisor): float

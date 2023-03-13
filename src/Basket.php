@@ -12,14 +12,8 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 
 class Basket
 {
-    /**
-     * @var
-     */
     private $rate;
 
-    /**
-     * @var
-     */
     private $currency;
 
     /**
@@ -27,24 +21,16 @@ class Basket
      */
     private $products;
 
-    /**
-     * @var
-     */
     private $discount;
 
-    /**
-     * @var
-     */
     private $delivery;
 
     /**
      * Basket constructor.
-     *
-     * @param  Jurisdiction  $jurisdiction
      */
     public function __construct(Jurisdiction $jurisdiction)
     {
-        $this->rate     = $jurisdiction->rate();
+        $this->rate = $jurisdiction->rate();
         $this->currency = $jurisdiction->currency();
         $this->products = new Collection;
     }
@@ -82,7 +68,6 @@ class Basket
     }
 
     /**
-     * @param $sku
      * @return mixed
      */
     public function pick($sku)
@@ -90,18 +75,11 @@ class Basket
         return $this->products->get($sku);
     }
 
-    /**
-     * @param  Product  $product
-     */
     public function add(Product $product)
     {
         $this->products->add($product->sku, $product);
     }
 
-    /**
-     * @param $sku
-     * @param  Closure  $action
-     */
     public function update($sku, Closure $action)
     {
         $product = $this->pick($sku);
@@ -109,9 +87,6 @@ class Basket
         $product->action($action);
     }
 
-    /**
-     * @param $sku
-     */
     public function remove($sku)
     {
         $product = $this->pick($sku);
@@ -126,25 +101,16 @@ class Basket
         }
     }
 
-    /**
-     * @param $sku
-     */
     public function has($sku)
     {
         return $this->products->containsKey($sku);
     }
 
-    /**
-     * @param  Discount  $discount
-     */
     public function discount(Discount $discount)
     {
         $this->discount = $discount;
     }
 
-    /**
-     * @param  Money  $delivery
-     */
     public function delivery(Money $delivery)
     {
         $this->delivery = $delivery;
@@ -159,7 +125,6 @@ class Basket
     }
 
     /**
-     * @param $key
      * @return mixed
      */
     public function __get($key)

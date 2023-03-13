@@ -9,10 +9,6 @@ use PreemStudio\Basket\Contracts\Percentage;
 
 class PercentFormatter implements Formatter
 {
-    /**
-     * @param $value
-     * @return string
-     */
     public function format($value): string
     {
         if ($value instanceof Percentage) {

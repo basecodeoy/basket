@@ -26,7 +26,7 @@ class Pennsylvania implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new PennsylvaniaValueAddedTax;
+        $this->tax = new PennsylvaniaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Pennsylvania implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

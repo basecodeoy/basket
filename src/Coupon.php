@@ -6,9 +6,6 @@ namespace PreemStudio\Basket;
 
 class Coupon
 {
-    /**
-     * @var
-     */
     private $identifier;
 
     /**
@@ -18,13 +15,11 @@ class Coupon
 
     /**
      * Coupon constructor.
-     *
-     * @param $identifier
      */
     public function __construct($identifier)
     {
         $this->identifier = $identifier;
-        $this->discounts  = new Collection;
+        $this->discounts = new Collection;
     }
 
     /**
@@ -52,7 +47,6 @@ class Coupon
     }
 
     /**
-     * @param $index
      * @return mixed
      */
     public function pick($index)
@@ -60,17 +54,11 @@ class Coupon
         return $this->discounts->get($index);
     }
 
-    /**
-     * @param $discount
-     */
     public function add($discount)
     {
         $this->discounts->push($discount);
     }
 
-    /**
-     * @param $index
-     */
     public function remove($index)
     {
         $this->discounts->remove($index);

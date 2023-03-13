@@ -26,7 +26,7 @@ class Maryland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new MarylandValueAddedTax;
+        $this->tax = new MarylandValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Maryland implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

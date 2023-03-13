@@ -26,7 +26,7 @@ class NewJersey implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new NewJerseyValueAddedTax;
+        $this->tax = new NewJerseyValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class NewJersey implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

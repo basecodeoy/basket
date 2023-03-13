@@ -26,7 +26,7 @@ class Bolivia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new BoliviaValueAddedTax;
+        $this->tax = new BoliviaValueAddedTax;
         $this->currency = new Currency('BOB');
     }
 
@@ -38,9 +38,6 @@ class Bolivia implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

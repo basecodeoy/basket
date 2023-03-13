@@ -26,7 +26,7 @@ class Macedonia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new MacedoniaValueAddedTax;
+        $this->tax = new MacedoniaValueAddedTax;
         $this->currency = new Currency('MKD');
     }
 
@@ -38,9 +38,6 @@ class Macedonia implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

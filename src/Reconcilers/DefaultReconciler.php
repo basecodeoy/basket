@@ -11,7 +11,6 @@ use PreemStudio\Basket\Product;
 class DefaultReconciler implements Reconciler
 {
     /**
-     * @param  Product  $product
      * @return mixed
      */
     public function value(Product $product)
@@ -20,7 +19,6 @@ class DefaultReconciler implements Reconciler
     }
 
     /**
-     * @param  Product  $product
      * @return Money
      */
     public function discount(Product $product)
@@ -43,7 +41,7 @@ class DefaultReconciler implements Reconciler
                 $discount = $discount->multiply($product->quantity);
 
                 // Add the discount to the discount total
-                $discount      = new Money($discount->getAmount(), $product->price->getCurrency());
+                $discount = new Money($discount->getAmount(), $product->price->getCurrency());
                 $discountTotal = $discountTotal->add($discount);
             }
         }
@@ -52,7 +50,6 @@ class DefaultReconciler implements Reconciler
     }
 
     /**
-     * @param  Product  $product
      * @return mixed
      */
     public function delivery(Product $product)
@@ -63,7 +60,6 @@ class DefaultReconciler implements Reconciler
     }
 
     /**
-     * @param  Product  $product
      * @return Money
      */
     public function tax(Product $product)
@@ -74,17 +70,16 @@ class DefaultReconciler implements Reconciler
             return $tax;
         }
 
-        $value    = $this->value($product);
+        $value = $this->value($product);
         $discount = $this->discount($product);
 
         $value = $value->subtract($discount);
-        $tax   = $value->multiply($product->rate->float());
+        $tax = $value->multiply($product->rate->float());
 
         return $tax;
     }
 
     /**
-     * @param  Product  $product
      * @return Money
      */
     public function subtotal(Product $product)
@@ -92,7 +87,7 @@ class DefaultReconciler implements Reconciler
         $subtotal = $this->money($product);
 
         if (! $product->freebie) {
-            $value    = $this->value($product);
+            $value = $this->value($product);
             $discount = $this->discount($product);
             $subtotal = $subtotal->add($value)->subtract($discount);
         }
@@ -104,20 +99,18 @@ class DefaultReconciler implements Reconciler
     }
 
     /**
-     * @param  Product  $product
      * @return mixed
      */
     public function total(Product $product)
     {
-        $tax      = $this->tax($product);
+        $tax = $this->tax($product);
         $subtotal = $this->subtotal($product);
-        $total    = $subtotal->add($tax);
+        $total = $subtotal->add($tax);
 
         return $total;
     }
 
     /**
-     * @param  Product  $product
      * @return Money
      */
     private function money(Product $product)

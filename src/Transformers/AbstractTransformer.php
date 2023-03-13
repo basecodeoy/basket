@@ -17,8 +17,6 @@ abstract class AbstractTransformer implements Transformer
 
     /**
      * AbstractTransformer constructor.
-     *
-     * @param  Converter  $converter
      */
     public function __construct(Converter $converter)
     {
@@ -26,7 +24,6 @@ abstract class AbstractTransformer implements Transformer
     }
 
     /**
-     * @param  Order  $order
      * @return mixed
      */
     public function build(Order $order)

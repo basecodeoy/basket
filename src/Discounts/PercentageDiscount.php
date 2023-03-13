@@ -12,15 +12,10 @@ use PreemStudio\Basket\Product;
 
 class PercentageDiscount implements Discount, Percentage
 {
-    /**
-     * @var
-     */
     private $rate;
 
     /**
      * PercentageDiscount constructor.
-     *
-     * @param $rate
      */
     public function __construct($rate)
     {
@@ -28,7 +23,6 @@ class PercentageDiscount implements Discount, Percentage
     }
 
     /**
-     * @param  Product  $product
      * @return mixed
      */
     public function product(Product $product): Money
@@ -36,17 +30,11 @@ class PercentageDiscount implements Discount, Percentage
         return $product->price->multiply($this->rate / 100);
     }
 
-    /**
-     * @return Percent
-     */
     public function rate(): Percent
     {
         return new Percent($this->rate);
     }
 
-    /**
-     * @return Percent
-     */
     public function toPercent(): Percent
     {
         return new Percent($this->rate);

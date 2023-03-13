@@ -21,17 +21,11 @@ class ConnecticutValueAddedTax implements TaxRate
         $this->rate = 0.635;
     }
 
-    /**
-     * @return float
-     */
     public function float(): float
     {
         return $this->rate;
     }
 
-    /**
-     * @return int
-     */
     public function percentage(): int
     {
         return intval($this->rate * 100);

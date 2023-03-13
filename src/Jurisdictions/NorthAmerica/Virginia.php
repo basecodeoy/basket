@@ -26,7 +26,7 @@ class Virginia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new VirginiaValueAddedTax;
+        $this->tax = new VirginiaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Virginia implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

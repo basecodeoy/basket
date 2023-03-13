@@ -26,7 +26,7 @@ class Croatia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new CrotiaValueAddedTax;
+        $this->tax = new CrotiaValueAddedTax;
         $this->currency = new Currency('HRK');
     }
 
@@ -38,9 +38,6 @@ class Croatia implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

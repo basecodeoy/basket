@@ -26,7 +26,7 @@ class Italy implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new ItalyValueAddedTax;
+        $this->tax = new ItalyValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 
@@ -38,9 +38,6 @@ class Italy implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

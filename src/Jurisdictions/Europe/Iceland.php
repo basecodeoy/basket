@@ -26,7 +26,7 @@ class Iceland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new IcelandValueAddedTax;
+        $this->tax = new IcelandValueAddedTax;
         $this->currency = new Currency('ISK');
     }
 
@@ -38,9 +38,6 @@ class Iceland implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

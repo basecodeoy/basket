@@ -9,7 +9,6 @@ use PreemStudio\Basket\Basket;
 interface MetaData
 {
     /**
-     * @param  Basket  $basket
      * @return mixed
      */
     public function generate(Basket $basket);

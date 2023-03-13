@@ -26,7 +26,7 @@ class Alaska implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new AlaskaValueAddedTax;
+        $this->tax = new AlaskaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Alaska implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

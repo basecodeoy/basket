@@ -18,8 +18,6 @@ class SubtotalMetaData implements MetaData
 
     /**
      * SubtotalMetaData constructor.
-     *
-     * @param  Reconciler  $reconciler
      */
     public function __construct(Reconciler $reconciler)
     {
@@ -27,7 +25,6 @@ class SubtotalMetaData implements MetaData
     }
 
     /**
-     * @param  Basket  $basket
      * @return Money
      */
     public function generate(Basket $basket)

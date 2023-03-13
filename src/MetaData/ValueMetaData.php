@@ -20,8 +20,6 @@ class ValueMetaData implements MetaData
 
     /**
      * ValueMetaData constructor.
-     *
-     * @param  Reconciler  $reconciler
      */
     public function __construct(Reconciler $reconciler)
     {
@@ -29,7 +27,6 @@ class ValueMetaData implements MetaData
     }
 
     /**
-     * @param  Basket  $basket
      * @return Money
      */
     public function generate(Basket $basket)

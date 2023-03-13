@@ -26,7 +26,7 @@ class Washington implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new WashingtonValueAddedTax;
+        $this->tax = new WashingtonValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Washington implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

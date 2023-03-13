@@ -26,7 +26,7 @@ class Missouri implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new MissouriValueAddedTax;
+        $this->tax = new MissouriValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Missouri implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

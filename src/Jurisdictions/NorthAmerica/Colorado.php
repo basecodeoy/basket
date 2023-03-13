@@ -26,7 +26,7 @@ class Colorado implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new ColoradoValueAddedTax;
+        $this->tax = new ColoradoValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Colorado implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

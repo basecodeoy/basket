@@ -26,7 +26,7 @@ class SouthDakota implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new SouthDakotaValueAddedTax;
+        $this->tax = new SouthDakotaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class SouthDakota implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

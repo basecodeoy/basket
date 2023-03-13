@@ -26,7 +26,7 @@ class Bulgaria implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new BulgariaValueAddedTax;
+        $this->tax = new BulgariaValueAddedTax;
         $this->currency = new Currency('BGN');
     }
 
@@ -38,9 +38,6 @@ class Bulgaria implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

@@ -26,7 +26,7 @@ class Ukraine implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new UkraineValueAddedTax;
+        $this->tax = new UkraineValueAddedTax;
         $this->currency = new Currency('UAH');
     }
 
@@ -38,9 +38,6 @@ class Ukraine implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

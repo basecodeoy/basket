@@ -6,15 +6,10 @@ namespace PreemStudio\Basket;
 
 class Percent
 {
-    /**
-     * @var
-     */
     private $value;
 
     /**
      * Percent constructor.
-     *
-     * @param $value
      */
     public function __construct($value)
     {

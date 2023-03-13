@@ -9,7 +9,6 @@ use PreemStudio\Basket\Order;
 class ArrayTransformer extends AbstractTransformer
 {
     /**
-     * @param  Order  $order
      * @return mixed
      */
     public function transform(Order $order)

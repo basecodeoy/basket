@@ -18,18 +18,12 @@ class Collection implements Countable, IteratorAggregate
 
     /**
      * Collection constructor.
-     *
-     * @param  array  $items
      */
     public function __construct(array $items = [])
     {
         $this->items = $items;
     }
 
-    /**
-     * @param $key
-     * @param $value
-     */
     public function add($key, $value)
     {
         $this->items[$key] = $value;
@@ -44,7 +38,6 @@ class Collection implements Countable, IteratorAggregate
     }
 
     /**
-     * @param $value
      * @return bool
      */
     public function contains($value)
@@ -53,7 +46,6 @@ class Collection implements Countable, IteratorAggregate
     }
 
     /**
-     * @param $value
      * @return bool
      */
     public function containsKey($value)
@@ -69,9 +61,6 @@ class Collection implements Countable, IteratorAggregate
         return count($this->items);
     }
 
-    /**
-     * @param  Closure  $callback
-     */
     public function each(Closure $callback)
     {
         array_map($callback, $this->items);
@@ -86,7 +75,6 @@ class Collection implements Countable, IteratorAggregate
     }
 
     /**
-     * @param  Closure  $callback
      * @return Collection
      */
     public function filter(Closure $callback)
@@ -133,7 +121,6 @@ class Collection implements Countable, IteratorAggregate
     }
 
     /**
-     * @param $key
      * @return mixed
      */
     public function get($key)
@@ -150,7 +137,6 @@ class Collection implements Countable, IteratorAggregate
     }
 
     /**
-     * @param  Closure  $callback
      * @return Collection
      */
     public function map(Closure $callback)
@@ -166,32 +152,22 @@ class Collection implements Countable, IteratorAggregate
         return array_pop($this->items);
     }
 
-    /**
-     * @param $value
-     */
     public function prepend($value)
     {
         array_unshift($this->items, $value);
     }
 
-    /**
-     * @param $value
-     */
     public function push($value)
     {
         $this->items[] = $value;
     }
 
-    /**
-     * @param $key
-     */
     public function remove($key)
     {
         unset($this->items[$key]);
     }
 
     /**
-     * @param $value
      * @return mixed
      */
     public function search($value)
@@ -207,9 +183,6 @@ class Collection implements Countable, IteratorAggregate
         return array_shift($this->items);
     }
 
-    /**
-     * @param  Closure  $callback
-     */
     public function sort(Closure $callback)
     {
         uasort($this->items, $callback);

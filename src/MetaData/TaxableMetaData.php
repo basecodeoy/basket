@@ -10,7 +10,6 @@ use PreemStudio\Basket\Contracts\MetaData;
 class TaxableMetaData implements MetaData
 {
     /**
-     * @param  Basket  $basket
      * @return int
      */
     public function generate(Basket $basket)

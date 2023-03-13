@@ -26,7 +26,7 @@ class Georgia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new GeorgiaValueAddedTax;
+        $this->tax = new GeorgiaValueAddedTax;
         $this->currency = new Currency('GEL');
     }
 
@@ -38,9 +38,6 @@ class Georgia implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

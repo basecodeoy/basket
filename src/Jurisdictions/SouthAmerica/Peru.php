@@ -26,7 +26,7 @@ class Peru implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new PeruValueAddedTax;
+        $this->tax = new PeruValueAddedTax;
         $this->currency = new Currency('PEN');
     }
 
@@ -38,9 +38,6 @@ class Peru implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

@@ -26,7 +26,7 @@ class Paraguay implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new ParaguayValueAddedTax;
+        $this->tax = new ParaguayValueAddedTax;
         $this->currency = new Currency('PYG');
     }
 
@@ -38,9 +38,6 @@ class Paraguay implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

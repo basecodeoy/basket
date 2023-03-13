@@ -26,7 +26,7 @@ class Portugal implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new PortugalValueAddedTax;
+        $this->tax = new PortugalValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 
@@ -38,9 +38,6 @@ class Portugal implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

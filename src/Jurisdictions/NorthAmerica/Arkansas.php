@@ -26,7 +26,7 @@ class Arkansas implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new ArkansasValueAddedTax;
+        $this->tax = new ArkansasValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Arkansas implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

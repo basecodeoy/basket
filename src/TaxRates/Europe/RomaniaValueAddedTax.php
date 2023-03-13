@@ -21,17 +21,11 @@ class RomaniaValueAddedTax implements TaxRate
         $this->rate = 0.24;
     }
 
-    /**
-     * @return float
-     */
     public function float(): float
     {
         return $this->rate;
     }
 
-    /**
-     * @return int
-     */
     public function percentage(): int
     {
         return intval($this->rate * 100);

@@ -26,7 +26,7 @@ class Minnesota implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new MinnesotaValueAddedTax;
+        $this->tax = new MinnesotaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Minnesota implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

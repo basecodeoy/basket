@@ -26,7 +26,7 @@ class Sweden implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new SwedenValueAddedTax;
+        $this->tax = new SwedenValueAddedTax;
         $this->currency = new Currency('SEK');
     }
 
@@ -38,9 +38,6 @@ class Sweden implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;

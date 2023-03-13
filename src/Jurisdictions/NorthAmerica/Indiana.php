@@ -26,7 +26,7 @@ class Indiana implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new IndianaValueAddedTax;
+        $this->tax = new IndianaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 
@@ -38,9 +38,6 @@ class Indiana implements Jurisdiction
         return $this->tax;
     }
 
-    /**
-     * @return Currency
-     */
     public function currency(): Currency
     {
         return $this->currency;
