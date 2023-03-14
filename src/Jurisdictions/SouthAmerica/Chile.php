@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\SouthAmerica\ChileValueAddedTax;
 
-class Chile implements Jurisdiction
+final class Chile implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Chile implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new ChileValueAddedTax;
+        $this->tax      = new ChileValueAddedTax;
         $this->currency = new Currency('CLP');
     }
 

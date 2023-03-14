@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\TaxRates\SouthAmerica;
 
 use PreemStudio\Basket\Contracts\TaxRate;
 
-class GuyanaValueAddedTax implements TaxRate
+final class GuyanaValueAddedTax implements TaxRate
 {
     /**
      * @var float

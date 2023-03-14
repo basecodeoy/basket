@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\UkraineValueAddedTax;
 
-class Ukraine implements Jurisdiction
+final class Ukraine implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Ukraine implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new UkraineValueAddedTax;
+        $this->tax      = new UkraineValueAddedTax;
         $this->currency = new Currency('UAH');
     }
 

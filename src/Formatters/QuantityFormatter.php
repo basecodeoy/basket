@@ -8,7 +8,7 @@ use PreemStudio\Basket\Contracts\Formatter;
 use PreemStudio\Basket\Discounts\PercentageDiscount;
 use PreemStudio\Basket\Discounts\ValueDiscount;
 
-class QuantityFormatter implements Formatter
+final class QuantityFormatter implements Formatter
 {
     public function format($value): string
     {

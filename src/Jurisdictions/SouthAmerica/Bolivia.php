@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\SouthAmerica\BoliviaValueAddedTax;
 
-class Bolivia implements Jurisdiction
+final class Bolivia implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Bolivia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new BoliviaValueAddedTax;
+        $this->tax      = new BoliviaValueAddedTax;
         $this->currency = new Currency('BOB');
     }
 

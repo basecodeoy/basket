@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\CyprusValueAddedTax;
 
-class Cyprus implements Jurisdiction
+final class Cyprus implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Cyprus implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new CyprusValueAddedTax;
+        $this->tax      = new CyprusValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 

@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\DenmarkValueAddedTax;
 
-class Denmark implements Jurisdiction
+final class Denmark implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Denmark implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new DenmarkValueAddedTax;
+        $this->tax      = new DenmarkValueAddedTax;
         $this->currency = new Currency('DKK');
     }
 

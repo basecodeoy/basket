@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\Formatters;
 
 use PreemStudio\Basket\Contracts\Formatter;
 
-class CollectionFormatter implements Formatter
+final class CollectionFormatter implements Formatter
 {
     /**
      * @return mixed

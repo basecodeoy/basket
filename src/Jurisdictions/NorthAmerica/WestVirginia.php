@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\WestVirginiaValueAddedTax;
 
-class WestVirginia implements Jurisdiction
+final class WestVirginia implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class WestVirginia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new WestVirginiaValueAddedTax;
+        $this->tax      = new WestVirginiaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

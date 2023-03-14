@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PreemStudio\Basket;
 
-class Coupon
+final class Coupon
 {
     private $identifier;
 
@@ -19,7 +19,7 @@ class Coupon
     public function __construct($identifier)
     {
         $this->identifier = $identifier;
-        $this->discounts = new Collection;
+        $this->discounts  = new Collection;
     }
 
     /**

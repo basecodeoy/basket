@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Discount;
 use PreemStudio\Basket\Contracts\Money as MoneyInterface;
 use PreemStudio\Basket\Product;
 
-class ValueDiscount implements Discount, MoneyInterface
+final class ValueDiscount implements Discount, MoneyInterface
 {
     /**
      * @var Money

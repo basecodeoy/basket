@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\AlbaniaValueAddedTax;
 
-class Albania implements Jurisdiction
+final class Albania implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Albania implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new AlbaniaValueAddedTax;
+        $this->tax      = new AlbaniaValueAddedTax;
         $this->currency = new Currency('ALL');
     }
 

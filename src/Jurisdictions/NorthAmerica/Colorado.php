@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\ColoradoValueAddedTax;
 
-class Colorado implements Jurisdiction
+final class Colorado implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Colorado implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new ColoradoValueAddedTax;
+        $this->tax      = new ColoradoValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

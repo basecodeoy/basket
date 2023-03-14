@@ -11,7 +11,7 @@ use PreemStudio\Basket\Contracts\Formatter;
 use PreemStudio\Basket\Discounts\ValueDiscount;
 use PreemStudio\Basket\Money as MoneyInterface;
 
-class MoneyFormatter implements Formatter
+final class MoneyFormatter implements Formatter
 {
     /**
      * @var null
@@ -46,9 +46,9 @@ class MoneyFormatter implements Formatter
             $value = $value->rate();
         }
 
-        $code = $this->code($value);
+        $code    = $this->code($value);
         $divisor = $this->divisor($code);
-        $amount = $this->convert($value, $divisor);
+        $amount  = $this->convert($value, $divisor);
 
         return $formatter->formatCurrency($amount, $code);
     }

@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\LouisianaValueAddedTax;
 
-class Louisiana implements Jurisdiction
+final class Louisiana implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Louisiana implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new LouisianaValueAddedTax;
+        $this->tax      = new LouisianaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

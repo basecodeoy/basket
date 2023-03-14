@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\TaxRates\NorthAmerica;
 
 use PreemStudio\Basket\Contracts\TaxRate;
 
-class TennesseeValueAddedTax implements TaxRate
+final class TennesseeValueAddedTax implements TaxRate
 {
     /**
      * @var float

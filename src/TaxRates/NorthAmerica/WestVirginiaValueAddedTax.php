@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\TaxRates\NorthAmerica;
 
 use PreemStudio\Basket\Contracts\TaxRate;
 
-class WestVirginiaValueAddedTax implements TaxRate
+final class WestVirginiaValueAddedTax implements TaxRate
 {
     /**
      * @var float

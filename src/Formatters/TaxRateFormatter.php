@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\Formatters;
 
 use PreemStudio\Basket\Contracts\Formatter;
 
-class TaxRateFormatter implements Formatter
+final class TaxRateFormatter implements Formatter
 {
     public function format($value): string
     {

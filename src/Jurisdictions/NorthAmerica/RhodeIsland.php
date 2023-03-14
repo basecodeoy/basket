@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\RhodeIslandValueAddedTax;
 
-class RhodeIsland implements Jurisdiction
+final class RhodeIsland implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class RhodeIsland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new RhodeIslandValueAddedTax;
+        $this->tax      = new RhodeIslandValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

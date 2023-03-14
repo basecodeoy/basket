@@ -10,7 +10,7 @@ use PreemStudio\Basket\Contracts\Category;
 use PreemStudio\Basket\Contracts\Discount;
 use PreemStudio\Basket\Contracts\TaxRate;
 
-class Product
+final class Product
 {
     private $sku;
 
@@ -76,17 +76,17 @@ class Product
      */
     public function __construct($sku, $name, Money $price, TaxRate $rate)
     {
-        $this->sku = $sku;
-        $this->name = $name;
-        $this->price = $price;
-        $this->rate = $rate;
-        $this->quantity = 1;
-        $this->freebie = false;
-        $this->taxable = true;
-        $this->delivery = new Money(0, $price->getCurrency());
-        $this->coupons = new Collection;
-        $this->tags = new Collection;
-        $this->discounts = new Collection;
+        $this->sku        = $sku;
+        $this->name       = $name;
+        $this->price      = $price;
+        $this->rate       = $rate;
+        $this->quantity   = 1;
+        $this->freebie    = false;
+        $this->taxable    = true;
+        $this->delivery   = new Money(0, $price->getCurrency());
+        $this->coupons    = new Collection;
+        $this->tags       = new Collection;
+        $this->discounts  = new Collection;
         $this->attributes = new Collection;
     }
 

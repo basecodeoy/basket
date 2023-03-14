@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\IdahoValueAddedTax;
 
-class Idaho implements Jurisdiction
+final class Idaho implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Idaho implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new IdahoValueAddedTax;
+        $this->tax      = new IdahoValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

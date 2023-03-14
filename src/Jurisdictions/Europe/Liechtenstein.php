@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\LiechtensteinValueAddedTax;
 
-class Liechtenstein implements Jurisdiction
+final class Liechtenstein implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Liechtenstein implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new LiechtensteinValueAddedTax;
+        $this->tax      = new LiechtensteinValueAddedTax;
         $this->currency = new Currency('CHF');
     }
 

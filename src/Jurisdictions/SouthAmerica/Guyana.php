@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\SouthAmerica\GuyanaValueAddedTax;
 
-class Guyana implements Jurisdiction
+final class Guyana implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Guyana implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new GuyanaValueAddedTax;
+        $this->tax      = new GuyanaValueAddedTax;
         $this->currency = new Currency('GYD');
     }
 

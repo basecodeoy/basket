@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\UtahValueAddedTax;
 
-class Utah implements Jurisdiction
+final class Utah implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Utah implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new UtahValueAddedTax;
+        $this->tax      = new UtahValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\SlovakiaValueAddedTax;
 
-class Slovakia implements Jurisdiction
+final class Slovakia implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Slovakia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new SlovakiaValueAddedTax;
+        $this->tax      = new SlovakiaValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 

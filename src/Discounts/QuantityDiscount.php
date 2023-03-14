@@ -8,7 +8,7 @@ use Money\Money;
 use PreemStudio\Basket\Contracts\Discount;
 use PreemStudio\Basket\Product;
 
-class QuantityDiscount implements Discount
+final class QuantityDiscount implements Discount
 {
     private $quantity;
 
@@ -23,7 +23,7 @@ class QuantityDiscount implements Discount
     public function __construct($quantity, Discount $rate)
     {
         $this->quantity = $quantity;
-        $this->rate = $rate;
+        $this->rate     = $rate;
     }
 
     public function product(Product $product): Money

@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\SouthAmerica\BrazilValueAddedTax;
 
-class Brazil implements Jurisdiction
+final class Brazil implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Brazil implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new BrazilValueAddedTax;
+        $this->tax      = new BrazilValueAddedTax;
         $this->currency = new Currency('BRL');
     }
 

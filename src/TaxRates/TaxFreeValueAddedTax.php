@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\TaxRates;
 
 use PreemStudio\Basket\Contracts\TaxRate;
 
-class TaxFreeValueAddedTax implements TaxRate
+final class TaxFreeValueAddedTax implements TaxRate
 {
     /**
      * @var float

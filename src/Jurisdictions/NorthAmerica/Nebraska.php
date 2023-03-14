@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\NebraskaValueAddedTax;
 
-class Nebraska implements Jurisdiction
+final class Nebraska implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Nebraska implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new NebraskaValueAddedTax;
+        $this->tax      = new NebraskaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

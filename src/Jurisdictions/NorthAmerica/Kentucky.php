@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\KentuckyValueAddedTax;
 
-class Kentucky implements Jurisdiction
+final class Kentucky implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Kentucky implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new KentuckyValueAddedTax;
+        $this->tax      = new KentuckyValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\MarylandValueAddedTax;
 
-class Maryland implements Jurisdiction
+final class Maryland implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Maryland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new MarylandValueAddedTax;
+        $this->tax      = new MarylandValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

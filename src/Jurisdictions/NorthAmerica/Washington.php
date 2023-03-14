@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\WashingtonValueAddedTax;
 
-class Washington implements Jurisdiction
+final class Washington implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Washington implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new WashingtonValueAddedTax;
+        $this->tax      = new WashingtonValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

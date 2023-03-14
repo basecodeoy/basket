@@ -9,7 +9,7 @@ use PreemStudio\Basket\Basket;
 use PreemStudio\Basket\Contracts\MetaData;
 use PreemStudio\Basket\Contracts\Reconciler;
 
-class ValueMetaData implements MetaData
+final class ValueMetaData implements MetaData
 {
     use Traits\ApplyDiscount;
 

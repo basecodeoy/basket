@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\SouthAmerica\ArgentinaValueAddedTax;
 
-class Argentina implements Jurisdiction
+final class Argentina implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Argentina implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new ArgentinaValueAddedTax;
+        $this->tax      = new ArgentinaValueAddedTax;
         $this->currency = new Currency('ARS');
     }
 

@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\Formatters;
 
 use PreemStudio\Basket\Contracts\Formatter;
 
-class CouponFormatter implements Formatter
+final class CouponFormatter implements Formatter
 {
     public function format($value): array
     {

@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\RussiaValueAddedTax;
 
-class Russia implements Jurisdiction
+final class Russia implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Russia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new RussiaValueAddedTax;
+        $this->tax      = new RussiaValueAddedTax;
         $this->currency = new Currency('RUB');
     }
 

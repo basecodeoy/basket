@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\SwedenValueAddedTax;
 
-class Sweden implements Jurisdiction
+final class Sweden implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Sweden implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new SwedenValueAddedTax;
+        $this->tax      = new SwedenValueAddedTax;
         $this->currency = new Currency('SEK');
     }
 

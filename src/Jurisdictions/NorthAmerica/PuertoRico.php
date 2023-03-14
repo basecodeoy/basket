@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\PuertoRicoValueAddedTax;
 
-class PuertoRico implements Jurisdiction
+final class PuertoRico implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class PuertoRico implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new PuertoRicoValueAddedTax;
+        $this->tax      = new PuertoRicoValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

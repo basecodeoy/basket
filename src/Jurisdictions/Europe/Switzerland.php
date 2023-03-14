@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\SwitzerlandValueAddedTax;
 
-class Switzerland implements Jurisdiction
+final class Switzerland implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Switzerland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new SwitzerlandValueAddedTax;
+        $this->tax      = new SwitzerlandValueAddedTax;
         $this->currency = new Currency('CHF');
     }
 

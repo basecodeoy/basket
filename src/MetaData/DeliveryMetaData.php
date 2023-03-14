@@ -9,7 +9,7 @@ use PreemStudio\Basket\Basket;
 use PreemStudio\Basket\Contracts\MetaData;
 use PreemStudio\Basket\Contracts\Reconciler;
 
-class DeliveryMetaData implements MetaData
+final class DeliveryMetaData implements MetaData
 {
     /**
      * @var Reconciler

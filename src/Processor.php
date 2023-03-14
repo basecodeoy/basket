@@ -6,7 +6,7 @@ namespace PreemStudio\Basket;
 
 use PreemStudio\Basket\Contracts\Reconciler;
 
-class Processor
+final class Processor
 {
     /**
      * @var Reconciler
@@ -26,7 +26,7 @@ class Processor
     public function __construct(Reconciler $reconciler, $metadata = [])
     {
         $this->reconciler = $reconciler;
-        $this->metadata = $metadata;
+        $this->metadata   = $metadata;
     }
 
     /**
@@ -34,7 +34,7 @@ class Processor
      */
     public function process(Basket $basket)
     {
-        $meta = $this->meta($basket);
+        $meta     = $this->meta($basket);
         $products = $this->products($basket);
         $delivery = $basket->delivery;
 
@@ -64,25 +64,25 @@ class Processor
 
         foreach ($basket->products() as $product) {
             $products[] = [
-                'sku' => $product->sku,
-                'name' => $product->name,
-                'price' => $product->price,
-                'rate' => $product->rate,
-                'quantity' => $product->quantity,
-                'freebie' => $product->freebie,
-                'taxable' => $product->taxable,
-                'delivery' => $product->delivery,
-                'coupons' => $product->coupons,
-                'tags' => $product->tags,
-                'discounts' => $product->discounts,
-                'attributes' => $product->attributes,
-                'category' => $product->category,
-                'total_value' => $this->reconciler->value($product),
+                'sku'            => $product->sku,
+                'name'           => $product->name,
+                'price'          => $product->price,
+                'rate'           => $product->rate,
+                'quantity'       => $product->quantity,
+                'freebie'        => $product->freebie,
+                'taxable'        => $product->taxable,
+                'delivery'       => $product->delivery,
+                'coupons'        => $product->coupons,
+                'tags'           => $product->tags,
+                'discounts'      => $product->discounts,
+                'attributes'     => $product->attributes,
+                'category'       => $product->category,
+                'total_value'    => $this->reconciler->value($product),
                 'total_discount' => $this->reconciler->discount($product),
                 'total_delivery' => $this->reconciler->delivery($product),
-                'total_tax' => $this->reconciler->tax($product),
-                'subtotal' => $this->reconciler->subtotal($product),
-                'total' => $this->reconciler->total($product),
+                'total_tax'      => $this->reconciler->tax($product),
+                'subtotal'       => $this->reconciler->subtotal($product),
+                'total'          => $this->reconciler->total($product),
             ];
         }
 

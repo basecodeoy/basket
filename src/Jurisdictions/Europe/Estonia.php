@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\EstoniaValueAddedTax;
 
-class Estonia implements Jurisdiction
+final class Estonia implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Estonia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new EstoniaValueAddedTax;
+        $this->tax      = new EstoniaValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 

@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\BulgariaValueAddedTax;
 
-class Bulgaria implements Jurisdiction
+final class Bulgaria implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Bulgaria implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new BulgariaValueAddedTax;
+        $this->tax      = new BulgariaValueAddedTax;
         $this->currency = new Currency('BGN');
     }
 

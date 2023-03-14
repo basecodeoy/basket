@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\FloridaValueAddedTax;
 
-class Florida implements Jurisdiction
+final class Florida implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Florida implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new FloridaValueAddedTax;
+        $this->tax      = new FloridaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\SouthAmerica\ParaguayValueAddedTax;
 
-class Paraguay implements Jurisdiction
+final class Paraguay implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Paraguay implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new ParaguayValueAddedTax;
+        $this->tax      = new ParaguayValueAddedTax;
         $this->currency = new Currency('PYG');
     }
 

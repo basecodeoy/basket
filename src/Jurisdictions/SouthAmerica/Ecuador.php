@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\SouthAmerica\EcuadorValueAddedTax;
 
-class Ecuador implements Jurisdiction
+final class Ecuador implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Ecuador implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new EcuadorValueAddedTax;
+        $this->tax      = new EcuadorValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

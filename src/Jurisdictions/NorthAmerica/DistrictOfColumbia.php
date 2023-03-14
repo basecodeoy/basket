@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\DistrictOfColumbiaValueAddedTax;
 
-class DistrictOfColumbia implements Jurisdiction
+final class DistrictOfColumbia implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class DistrictOfColumbia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new DistrictOfColumbiaValueAddedTax;
+        $this->tax      = new DistrictOfColumbiaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

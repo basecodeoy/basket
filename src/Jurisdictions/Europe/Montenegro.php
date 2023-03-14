@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\MontenegroValueAddedTax;
 
-class Montenegro implements Jurisdiction
+final class Montenegro implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Montenegro implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new MontenegroValueAddedTax;
+        $this->tax      = new MontenegroValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 

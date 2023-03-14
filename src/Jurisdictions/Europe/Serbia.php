@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\SerbiaValueAddedTax;
 
-class Serbia implements Jurisdiction
+final class Serbia implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Serbia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new SerbiaValueAddedTax;
+        $this->tax      = new SerbiaValueAddedTax;
         $this->currency = new Currency('RSD');
     }
 

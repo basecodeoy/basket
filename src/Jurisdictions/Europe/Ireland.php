@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\IrelandValueAddedTax;
 
-class Ireland implements Jurisdiction
+final class Ireland implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Ireland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new IrelandValueAddedTax;
+        $this->tax      = new IrelandValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 

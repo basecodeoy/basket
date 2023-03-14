@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\TaxRates\NorthAmerica;
 
 use PreemStudio\Basket\Contracts\TaxRate;
 
-class RhodeIslandValueAddedTax implements TaxRate
+final class RhodeIslandValueAddedTax implements TaxRate
 {
     /**
      * @var float

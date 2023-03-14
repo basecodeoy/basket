@@ -6,7 +6,7 @@ namespace PreemStudio\Basket;
 
 use Money\Money;
 
-class Order
+final class Order
 {
     /**
      * @var array
@@ -30,7 +30,7 @@ class Order
      */
     public function __construct(array $meta, array $products, ?Money $delivery)
     {
-        $this->meta = $meta;
+        $this->meta     = $meta;
         $this->products = $products;
         $this->delivery = $delivery;
     }

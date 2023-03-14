@@ -7,7 +7,7 @@ namespace PreemStudio\Basket\Categories;
 use PreemStudio\Basket\Contracts\Category;
 use PreemStudio\Basket\Product;
 
-class PhysicalBook implements Category
+final class PhysicalBook implements Category
 {
     public function categorise(Product $product)
     {

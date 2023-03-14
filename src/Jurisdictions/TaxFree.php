@@ -8,7 +8,7 @@ use Money\Currency;
 use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\TaxRates\TaxFreeValueAddedTax;
 
-class TaxFree implements Jurisdiction
+final class TaxFree implements Jurisdiction
 {
     /**
      * @var Currency
@@ -25,7 +25,7 @@ class TaxFree implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new TaxFreeValueAddedTax;
+        $this->tax      = new TaxFreeValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

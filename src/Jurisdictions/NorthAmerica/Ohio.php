@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\OhioValueAddedTax;
 
-class Ohio implements Jurisdiction
+final class Ohio implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Ohio implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new OhioValueAddedTax;
+        $this->tax      = new OhioValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

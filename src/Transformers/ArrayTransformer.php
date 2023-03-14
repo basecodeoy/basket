@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\Transformers;
 
 use PreemStudio\Basket\Order;
 
-class ArrayTransformer extends AbstractTransformer
+final class ArrayTransformer extends AbstractTransformer
 {
     /**
      * @return mixed

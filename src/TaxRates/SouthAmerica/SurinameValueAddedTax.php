@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\TaxRates\SouthAmerica;
 
 use PreemStudio\Basket\Contracts\TaxRate;
 
-class SurinameValueAddedTax implements TaxRate
+final class SurinameValueAddedTax implements TaxRate
 {
     /**
      * @var float

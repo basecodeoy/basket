@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\MissouriValueAddedTax;
 
-class Missouri implements Jurisdiction
+final class Missouri implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Missouri implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new MissouriValueAddedTax;
+        $this->tax      = new MissouriValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

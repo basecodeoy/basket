@@ -7,7 +7,7 @@ namespace PreemStudio\Basket\Formatters;
 use PreemStudio\Basket\Contracts\Formatter;
 use PreemStudio\Basket\Contracts\Percentage;
 
-class PercentFormatter implements Formatter
+final class PercentFormatter implements Formatter
 {
     public function format($value): string
     {

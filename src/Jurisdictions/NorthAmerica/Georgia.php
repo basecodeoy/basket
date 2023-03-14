@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\GeorgiaValueAddedTax;
 
-class Georgia implements Jurisdiction
+final class Georgia implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Georgia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new GeorgiaValueAddedTax;
+        $this->tax      = new GeorgiaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

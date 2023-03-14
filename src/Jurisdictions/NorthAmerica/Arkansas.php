@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\ArkansasValueAddedTax;
 
-class Arkansas implements Jurisdiction
+final class Arkansas implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Arkansas implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new ArkansasValueAddedTax;
+        $this->tax      = new ArkansasValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

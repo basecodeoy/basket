@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\LuxembourgValueAddedTax;
 
-class Luxembourg implements Jurisdiction
+final class Luxembourg implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Luxembourg implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new LuxembourgValueAddedTax;
+        $this->tax      = new LuxembourgValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 

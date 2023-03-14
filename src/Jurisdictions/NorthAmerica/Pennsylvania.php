@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\PennsylvaniaValueAddedTax;
 
-class Pennsylvania implements Jurisdiction
+final class Pennsylvania implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Pennsylvania implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new PennsylvaniaValueAddedTax;
+        $this->tax      = new PennsylvaniaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

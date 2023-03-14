@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\MontanaValueAddedTax;
 
-class Montana implements Jurisdiction
+final class Montana implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Montana implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new MontanaValueAddedTax;
+        $this->tax      = new MontanaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

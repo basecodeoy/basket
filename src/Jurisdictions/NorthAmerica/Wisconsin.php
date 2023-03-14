@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\WisconsinValueAddedTax;
 
-class Wisconsin implements Jurisdiction
+final class Wisconsin implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Wisconsin implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new WisconsinValueAddedTax;
+        $this->tax      = new WisconsinValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

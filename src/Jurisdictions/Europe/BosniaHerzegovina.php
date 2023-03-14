@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\BosniaHerzegovinaValueAddedTax;
 
-class BosniaHerzegovina implements Jurisdiction
+final class BosniaHerzegovina implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class BosniaHerzegovina implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new BosniaHerzegovinaValueAddedTax;
+        $this->tax      = new BosniaHerzegovinaValueAddedTax;
         $this->currency = new Currency('BAM');
     }
 

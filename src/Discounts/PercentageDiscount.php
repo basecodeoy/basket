@@ -10,7 +10,7 @@ use PreemStudio\Basket\Contracts\Percentage;
 use PreemStudio\Basket\Percent;
 use PreemStudio\Basket\Product;
 
-class PercentageDiscount implements Discount, Percentage
+final class PercentageDiscount implements Discount, Percentage
 {
     private $rate;
 

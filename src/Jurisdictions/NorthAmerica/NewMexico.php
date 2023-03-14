@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\NewMexicoValueAddedTax;
 
-class NewMexico implements Jurisdiction
+final class NewMexico implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class NewMexico implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new NewMexicoValueAddedTax;
+        $this->tax      = new NewMexicoValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

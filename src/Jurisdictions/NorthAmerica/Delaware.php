@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\DelawareValueAddedTax;
 
-class Delaware implements Jurisdiction
+final class Delaware implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Delaware implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new DelawareValueAddedTax;
+        $this->tax      = new DelawareValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\MaltaValueAddedTax;
 
-class Malta implements Jurisdiction
+final class Malta implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Malta implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new MaltaValueAddedTax;
+        $this->tax      = new MaltaValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 

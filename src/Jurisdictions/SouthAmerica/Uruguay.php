@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\SouthAmerica\UruguayValueAddedTax;
 
-class Uruguay implements Jurisdiction
+final class Uruguay implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Uruguay implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new UruguayValueAddedTax;
+        $this->tax      = new UruguayValueAddedTax;
         $this->currency = new Currency('UYU');
     }
 

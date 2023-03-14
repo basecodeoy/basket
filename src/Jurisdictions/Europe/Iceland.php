@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\IcelandValueAddedTax;
 
-class Iceland implements Jurisdiction
+final class Iceland implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Iceland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new IcelandValueAddedTax;
+        $this->tax      = new IcelandValueAddedTax;
         $this->currency = new Currency('ISK');
     }
 

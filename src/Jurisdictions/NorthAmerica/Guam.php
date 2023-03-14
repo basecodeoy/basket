@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\GuamValueAddedTax;
 
-class Guam implements Jurisdiction
+final class Guam implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Guam implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new GuamValueAddedTax;
+        $this->tax      = new GuamValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

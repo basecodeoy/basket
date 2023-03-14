@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\SouthCarolinaValueAddedTax;
 
-class SouthCarolina implements Jurisdiction
+final class SouthCarolina implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class SouthCarolina implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new SouthCarolinaValueAddedTax;
+        $this->tax      = new SouthCarolinaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

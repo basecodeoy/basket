@@ -9,7 +9,7 @@ use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer as SymfonySerialiser;
 
-class XMLTransformer extends AbstractTransformer
+final class XMLTransformer extends AbstractTransformer
 {
     /**
      * @return mixed

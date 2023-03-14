@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\Transformers;
 
 use PreemStudio\Basket\Order;
 
-class JSONTransformer extends AbstractTransformer
+final class JSONTransformer extends AbstractTransformer
 {
     /**
      * @return mixed

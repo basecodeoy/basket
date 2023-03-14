@@ -7,7 +7,7 @@ namespace PreemStudio\Basket\MetaData;
 use PreemStudio\Basket\Basket;
 use PreemStudio\Basket\Contracts\MetaData;
 
-class TaxableMetaData implements MetaData
+final class TaxableMetaData implements MetaData
 {
     /**
      * @return int

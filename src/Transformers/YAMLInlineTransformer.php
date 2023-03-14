@@ -7,7 +7,7 @@ namespace PreemStudio\Basket\Transformers;
 use PreemStudio\Basket\Order;
 use Symfony\Component\Yaml\Dumper;
 
-class YAMLInlineTransformer extends AbstractTransformer
+final class YAMLInlineTransformer extends AbstractTransformer
 {
     public function transform(Order $order): string
     {

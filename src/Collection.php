@@ -8,8 +8,9 @@ use ArrayIterator;
 use Closure;
 use Countable;
 use IteratorAggregate;
+use Traversable;
 
-class Collection implements Countable, IteratorAggregate
+final class Collection implements Countable, IteratorAggregate
 {
     /**
      * @var array
@@ -53,10 +54,7 @@ class Collection implements Countable, IteratorAggregate
         return array_key_exists($value, $this->items);
     }
 
-    /**
-     * @return int
-     */
-    public function count()
+    public function count(): int
     {
         return count($this->items);
     }
@@ -204,7 +202,7 @@ class Collection implements Countable, IteratorAggregate
     /**
      * @return ArrayIterator
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         return new ArrayIterator($this->items);
     }

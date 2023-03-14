@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\AustraliaValueAddedTax;
 
-class Australia implements Jurisdiction
+final class Australia implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Australia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new AustraliaValueAddedTax;
+        $this->tax      = new AustraliaValueAddedTax;
         $this->currency = new Currency('AUD');
     }
 

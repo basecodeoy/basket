@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\IllinoisValueAddedTax;
 
-class Illinois implements Jurisdiction
+final class Illinois implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Illinois implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new IllinoisValueAddedTax;
+        $this->tax      = new IllinoisValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

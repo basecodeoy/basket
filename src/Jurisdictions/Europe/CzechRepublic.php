@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\CzechRepublicValueAddedTax;
 
-class CzechRepublic implements Jurisdiction
+final class CzechRepublic implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class CzechRepublic implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new CzechRepublicValueAddedTax;
+        $this->tax      = new CzechRepublicValueAddedTax;
         $this->currency = new Currency('CZK');
     }
 

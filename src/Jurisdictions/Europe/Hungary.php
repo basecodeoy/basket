@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\HungaryValueAddedTax;
 
-class Hungary implements Jurisdiction
+final class Hungary implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Hungary implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new HungaryValueAddedTax;
+        $this->tax      = new HungaryValueAddedTax;
         $this->currency = new Currency('HUF');
     }
 

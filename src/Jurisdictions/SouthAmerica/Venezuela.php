@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\SouthAmerica\VenezuelaValueAddedTax;
 
-class Venezuela implements Jurisdiction
+final class Venezuela implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Venezuela implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new VenezuelaValueAddedTax;
+        $this->tax      = new VenezuelaValueAddedTax;
         $this->currency = new Currency('VEF');
     }
 

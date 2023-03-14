@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\GermanyValueAddedTax;
 
-class Germany implements Jurisdiction
+final class Germany implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Germany implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new GermanyValueAddedTax;
+        $this->tax      = new GermanyValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 

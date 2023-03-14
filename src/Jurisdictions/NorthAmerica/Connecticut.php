@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\ConnecticutValueAddedTax;
 
-class Connecticut implements Jurisdiction
+final class Connecticut implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Connecticut implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new ConnecticutValueAddedTax;
+        $this->tax      = new ConnecticutValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

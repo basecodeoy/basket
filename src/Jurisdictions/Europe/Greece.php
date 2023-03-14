@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\GreeceValueAddedTax;
 
-class Greece implements Jurisdiction
+final class Greece implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Greece implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new GreeceValueAddedTax;
+        $this->tax      = new GreeceValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 

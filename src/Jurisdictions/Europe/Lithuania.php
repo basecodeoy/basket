@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\LithuaniaValueAddedTax;
 
-class Lithuania implements Jurisdiction
+final class Lithuania implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Lithuania implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new LithuaniaValueAddedTax;
+        $this->tax      = new LithuaniaValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 

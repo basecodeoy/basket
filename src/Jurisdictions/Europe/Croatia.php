@@ -7,9 +7,9 @@ namespace PreemStudio\Basket\Jurisdictions\Europe;
 use Money\Currency;
 use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
-use PreemStudio\Basket\TaxRates\Europe\CrotiaValueAddedTax;
+use PreemStudio\Basket\TaxRates\Europe\CroatiaValueAddedTax;
 
-class Croatia implements Jurisdiction
+final class Croatia implements Jurisdiction
 {
     /**
      * @var Currency
@@ -17,7 +17,7 @@ class Croatia implements Jurisdiction
     private $currency;
 
     /**
-     * @var CrotiaValueAddedTax
+     * @var CroatiaValueAddedTax
      */
     private $tax;
 
@@ -26,12 +26,12 @@ class Croatia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new CrotiaValueAddedTax;
+        $this->tax      = new CroatiaValueAddedTax;
         $this->currency = new Currency('HRK');
     }
 
     /**
-     * @return CrotiaValueAddedTax
+     * @return CroatiaValueAddedTax
      */
     public function rate(): TaxRate
     {

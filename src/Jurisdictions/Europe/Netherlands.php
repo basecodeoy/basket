@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\NetherlandsValueAddedTax;
 
-class Netherlands implements Jurisdiction
+final class Netherlands implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Netherlands implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new NetherlandsValueAddedTax;
+        $this->tax      = new NetherlandsValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 

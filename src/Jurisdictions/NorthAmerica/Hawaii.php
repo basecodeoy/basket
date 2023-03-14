@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\HawaiiValueAddedTax;
 
-class Hawaii implements Jurisdiction
+final class Hawaii implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Hawaii implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new HawaiiValueAddedTax;
+        $this->tax      = new HawaiiValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

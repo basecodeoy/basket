@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\SouthAmerica\SurinameValueAddedTax;
 
-class Suriname implements Jurisdiction
+final class Suriname implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Suriname implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new SurinameValueAddedTax;
+        $this->tax      = new SurinameValueAddedTax;
         $this->currency = new Currency('SRD');
     }
 

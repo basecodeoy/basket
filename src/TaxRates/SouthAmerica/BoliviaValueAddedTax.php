@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\TaxRates\SouthAmerica;
 
 use PreemStudio\Basket\Contracts\TaxRate;
 
-class BoliviaValueAddedTax implements TaxRate
+final class BoliviaValueAddedTax implements TaxRate
 {
     /**
      * @var float

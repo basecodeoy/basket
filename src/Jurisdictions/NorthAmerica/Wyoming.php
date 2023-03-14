@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\WyomingValueAddedTax;
 
-class Wyoming implements Jurisdiction
+final class Wyoming implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Wyoming implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new WyomingValueAddedTax;
+        $this->tax      = new WyomingValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

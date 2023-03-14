@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\SouthAmerica\PeruValueAddedTax;
 
-class Peru implements Jurisdiction
+final class Peru implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Peru implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new PeruValueAddedTax;
+        $this->tax      = new PeruValueAddedTax;
         $this->currency = new Currency('PEN');
     }
 

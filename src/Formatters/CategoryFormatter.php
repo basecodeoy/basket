@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\Formatters;
 
 use PreemStudio\Basket\Contracts\Formatter;
 
-class CategoryFormatter implements Formatter
+final class CategoryFormatter implements Formatter
 {
     /**
      * @return mixed
@@ -14,8 +14,8 @@ class CategoryFormatter implements Formatter
     public function format($value): string
     {
         $namespace = explode('\\', get_class($value));
-        $class = array_pop($namespace);
-        $regex = '/(?<!^)((?<![[:upper:]])[[:upper:]]|[[:upper:]](?![[:upper:]]))/';
+        $class     = array_pop($namespace);
+        $regex     = '/(?<!^)((?<![[:upper:]])[[:upper:]]|[[:upper:]](?![[:upper:]]))/';
 
         return preg_replace($regex, ' $1', $class);
     }

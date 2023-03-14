@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\AlabamaValueAddedTax;
 
-class Alabama implements Jurisdiction
+final class Alabama implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Alabama implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new AlabamaValueAddedTax;
+        $this->tax      = new AlabamaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

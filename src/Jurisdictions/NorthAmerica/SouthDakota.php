@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\SouthDakotaValueAddedTax;
 
-class SouthDakota implements Jurisdiction
+final class SouthDakota implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class SouthDakota implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new SouthDakotaValueAddedTax;
+        $this->tax      = new SouthDakotaValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

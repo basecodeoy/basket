@@ -10,7 +10,7 @@ use Money\Money;
 use PreemStudio\Basket\Contracts\Discount;
 use PreemStudio\Basket\Contracts\Jurisdiction;
 
-class Basket
+final class Basket
 {
     private $rate;
 
@@ -30,7 +30,7 @@ class Basket
      */
     public function __construct(Jurisdiction $jurisdiction)
     {
-        $this->rate = $jurisdiction->rate();
+        $this->rate     = $jurisdiction->rate();
         $this->currency = $jurisdiction->currency();
         $this->products = new Collection;
     }

@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\FinlandValueAddedTax;
 
-class Finland implements Jurisdiction
+final class Finland implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Finland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new FinlandValueAddedTax;
+        $this->tax      = new FinlandValueAddedTax;
         $this->currency = new Currency('EUR');
     }
 

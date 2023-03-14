@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\Europe\MacedoniaValueAddedTax;
 
-class Macedonia implements Jurisdiction
+final class Macedonia implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Macedonia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new MacedoniaValueAddedTax;
+        $this->tax      = new MacedoniaValueAddedTax;
         $this->currency = new Currency('MKD');
     }
 

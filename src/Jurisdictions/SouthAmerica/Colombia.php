@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\SouthAmerica\ColombiaValueAddedTax;
 
-class Colombia implements Jurisdiction
+final class Colombia implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Colombia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new ColombiaValueAddedTax;
+        $this->tax      = new ColombiaValueAddedTax;
         $this->currency = new Currency('COP');
     }
 

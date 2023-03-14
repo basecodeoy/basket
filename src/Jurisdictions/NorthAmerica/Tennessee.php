@@ -9,7 +9,7 @@ use PreemStudio\Basket\Contracts\Jurisdiction;
 use PreemStudio\Basket\Contracts\TaxRate;
 use PreemStudio\Basket\TaxRates\NorthAmerica\TennesseeValueAddedTax;
 
-class Tennessee implements Jurisdiction
+final class Tennessee implements Jurisdiction
 {
     /**
      * @var Currency
@@ -26,7 +26,7 @@ class Tennessee implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax = new TennesseeValueAddedTax;
+        $this->tax      = new TennesseeValueAddedTax;
         $this->currency = new Currency('USD');
     }
 

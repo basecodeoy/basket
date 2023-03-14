@@ -6,7 +6,7 @@ namespace PreemStudio\Basket\Transformers;
 
 use PreemStudio\Basket\Order;
 
-class SerializeTransformer extends AbstractTransformer
+final class SerializeTransformer extends AbstractTransformer
 {
     public function transform(Order $order): string
     {

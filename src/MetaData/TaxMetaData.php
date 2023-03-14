@@ -9,7 +9,7 @@ use PreemStudio\Basket\Basket;
 use PreemStudio\Basket\Contracts\MetaData;
 use PreemStudio\Basket\Contracts\Reconciler;
 
-class TaxMetaData implements MetaData
+final class TaxMetaData implements MetaData
 {
     /**
      * @var Reconciler
