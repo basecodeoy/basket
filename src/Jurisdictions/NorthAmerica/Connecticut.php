@@ -26,7 +26,7 @@ final class Connecticut implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new ConnecticutValueAddedTax;
+        $this->tax = new ConnecticutValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

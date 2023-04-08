@@ -26,7 +26,7 @@ final class Paraguay implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new ParaguayValueAddedTax;
+        $this->tax = new ParaguayValueAddedTax();
         $this->currency = new Currency('PYG');
     }
 

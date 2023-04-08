@@ -26,7 +26,7 @@ final class Australia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new AustraliaValueAddedTax;
+        $this->tax = new AustraliaValueAddedTax();
         $this->currency = new Currency('AUD');
     }
 

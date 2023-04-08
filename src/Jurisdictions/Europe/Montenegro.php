@@ -26,7 +26,7 @@ final class Montenegro implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new MontenegroValueAddedTax;
+        $this->tax = new MontenegroValueAddedTax();
         $this->currency = new Currency('EUR');
     }
 

@@ -19,7 +19,7 @@ final class QuantityFormatter implements Formatter
         }
 
         if ($value instanceof ValueDiscount) {
-            return (new MoneyFormatter)->format($value);
+            return (new MoneyFormatter())->format($value);
         }
     }
 }

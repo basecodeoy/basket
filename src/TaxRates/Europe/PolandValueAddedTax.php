@@ -28,6 +28,6 @@ final class PolandValueAddedTax implements TaxRate
 
     public function percentage(): int
     {
-        return intval($this->rate * 100);
+        return (int) ($this->rate * 100);
     }
 }

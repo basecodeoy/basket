@@ -26,7 +26,7 @@ final class Slovenia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new SloveniaValueAddedTax;
+        $this->tax = new SloveniaValueAddedTax();
         $this->currency = new Currency('EUR');
     }
 

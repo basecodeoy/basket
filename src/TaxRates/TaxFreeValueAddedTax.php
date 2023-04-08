@@ -34,6 +34,6 @@ final class TaxFreeValueAddedTax implements TaxRate
      */
     public function percentage()
     {
-        return intval($this->rate * 100);
+        return (int) ($this->rate * 100);
     }
 }

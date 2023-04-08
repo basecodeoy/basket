@@ -26,7 +26,7 @@ final class Louisiana implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new LouisianaValueAddedTax;
+        $this->tax = new LouisianaValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

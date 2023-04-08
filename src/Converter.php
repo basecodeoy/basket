@@ -25,26 +25,27 @@ final class Converter
     public function __construct(array $formatters = [])
     {
         $bootstrap = [
-            'Category'           => new CategoryFormatter,
-            'Collection'         => new CollectionFormatter,
-            'Coupon'             => new CouponFormatter,
-            'Money'              => new MoneyFormatter,
-            'Percent'            => new PercentFormatter,
-            'PercentageDiscount' => new PercentFormatter,
-            'TaxRate'            => new TaxRateFormatter,
-            'QuantityDiscount'   => new QuantityFormatter,
-            'ValueDiscount'      => new MoneyFormatter,
+            'Category' => new CategoryFormatter(),
+            'Collection' => new CollectionFormatter(),
+            'Coupon' => new CouponFormatter(),
+            'Money' => new MoneyFormatter(),
+            'Percent' => new PercentFormatter(),
+            'PercentageDiscount' => new PercentFormatter(),
+            'TaxRate' => new TaxRateFormatter(),
+            'QuantityDiscount' => new QuantityFormatter(),
+            'ValueDiscount' => new MoneyFormatter(),
         ];
 
-        $this->formatters = array_merge($bootstrap, $formatters);
+        $this->formatters = \array_merge($bootstrap, $formatters);
     }
 
     /**
+     * @param  mixed $value
      * @return array
      */
     public function convert($value)
     {
-        if (! is_object($value)) {
+        if (!\is_object($value)) {
             return $value;
         }
 
@@ -58,11 +59,12 @@ final class Converter
     }
 
     /**
+     * @param  mixed $object
      * @return mixed
      */
     public function formatter($object)
     {
-        $interfaces = class_implements($object);
+        $interfaces = \class_implements($object);
 
         foreach ($interfaces as $interface) {
             $class = $this->getClassName($interface);
@@ -78,18 +80,19 @@ final class Converter
             }
         }
 
-        $class = $this->getClassName(get_class($object));
+        $class = $this->getClassName($object::class);
 
         return $this->formatters[$class];
     }
 
     /**
+     * @param  mixed $namespace
      * @return mixed
      */
     private function getClassName($namespace)
     {
-        $namespace = explode('\\', $namespace);
+        $namespace = \explode('\\', $namespace);
 
-        return array_pop($namespace);
+        return \array_pop($namespace);
     }
 }

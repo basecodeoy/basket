@@ -26,7 +26,7 @@ final class Washington implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new WashingtonValueAddedTax;
+        $this->tax = new WashingtonValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

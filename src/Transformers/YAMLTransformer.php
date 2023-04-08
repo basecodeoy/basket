@@ -11,6 +11,6 @@ final class YAMLTransformer extends AbstractTransformer
 {
     public function transform(Order $order): string
     {
-        return (new Dumper)->dump($this->build($order));
+        return (new Dumper())->dump($this->build($order));
     }
 }

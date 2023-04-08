@@ -26,7 +26,7 @@ final class Finland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new FinlandValueAddedTax;
+        $this->tax = new FinlandValueAddedTax();
         $this->currency = new Currency('EUR');
     }
 

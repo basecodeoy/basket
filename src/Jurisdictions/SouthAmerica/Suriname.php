@@ -26,7 +26,7 @@ final class Suriname implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new SurinameValueAddedTax;
+        $this->tax = new SurinameValueAddedTax();
         $this->currency = new Currency('SRD');
     }
 

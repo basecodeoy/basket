@@ -9,14 +9,15 @@ use PreemStudio\Basket\Contracts\Formatter;
 final class CategoryFormatter implements Formatter
 {
     /**
+     * @param  mixed $value
      * @return mixed
      */
     public function format($value): string
     {
-        $namespace = explode('\\', get_class($value));
-        $class     = array_pop($namespace);
-        $regex     = '/(?<!^)((?<![[:upper:]])[[:upper:]]|[[:upper:]](?![[:upper:]]))/';
+        $namespace = \explode('\\', $value::class);
+        $class = \array_pop($namespace);
+        $regex = '/(?<!^)((?<![[:upper:]])[[:upper:]]|[[:upper:]](?![[:upper:]]))/';
 
-        return preg_replace($regex, ' $1', $class);
+        return \preg_replace($regex, ' $1', $class);
     }
 }

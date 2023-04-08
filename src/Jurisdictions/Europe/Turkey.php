@@ -26,7 +26,7 @@ final class Turkey implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new TurkeyValueAddedTax;
+        $this->tax = new TurkeyValueAddedTax();
         $this->currency = new Currency('TRY');
     }
 

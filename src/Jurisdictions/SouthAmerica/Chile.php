@@ -26,7 +26,7 @@ final class Chile implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new ChileValueAddedTax;
+        $this->tax = new ChileValueAddedTax();
         $this->currency = new Currency('CLP');
     }
 

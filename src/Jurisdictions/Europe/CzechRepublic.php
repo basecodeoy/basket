@@ -26,7 +26,7 @@ final class CzechRepublic implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new CzechRepublicValueAddedTax;
+        $this->tax = new CzechRepublicValueAddedTax();
         $this->currency = new Currency('CZK');
     }
 

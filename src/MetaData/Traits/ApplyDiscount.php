@@ -54,7 +54,7 @@ trait ApplyDiscount
     }
 
     /**
-     * @param  Basket  $discount
+     * @param  Basket $discount
      * @return Money
      */
     public function calculateTotalWithDiscount(Basket $basket, Discount $discount)

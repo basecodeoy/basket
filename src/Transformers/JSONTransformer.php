@@ -13,6 +13,6 @@ final class JSONTransformer extends AbstractTransformer
      */
     public function transform(Order $order): string
     {
-        return json_encode($this->build($order));
+        return \json_encode($this->build($order));
     }
 }

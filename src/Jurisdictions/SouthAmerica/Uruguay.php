@@ -26,7 +26,7 @@ final class Uruguay implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new UruguayValueAddedTax;
+        $this->tax = new UruguayValueAddedTax();
         $this->currency = new Currency('UYU');
     }
 

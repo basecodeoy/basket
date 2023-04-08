@@ -26,7 +26,7 @@ final class Maine implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new MaineValueAddedTax;
+        $this->tax = new MaineValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

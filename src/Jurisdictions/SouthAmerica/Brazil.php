@@ -26,7 +26,7 @@ final class Brazil implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new BrazilValueAddedTax;
+        $this->tax = new BrazilValueAddedTax();
         $this->currency = new Currency('BRL');
     }
 

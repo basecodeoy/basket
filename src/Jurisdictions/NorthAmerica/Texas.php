@@ -26,7 +26,7 @@ final class Texas implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new TexasValueAddedTax;
+        $this->tax = new TexasValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

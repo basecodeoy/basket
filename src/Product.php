@@ -73,44 +73,62 @@ final class Product
 
     /**
      * Product constructor.
+     *
+     * @param mixed $sku
+     * @param mixed $name
      */
     public function __construct($sku, $name, Money $price, TaxRate $rate)
     {
-        $this->sku        = $sku;
-        $this->name       = $name;
-        $this->price      = $price;
-        $this->rate       = $rate;
-        $this->quantity   = 1;
-        $this->freebie    = false;
-        $this->taxable    = true;
-        $this->delivery   = new Money(0, $price->getCurrency());
-        $this->coupons    = new Collection;
-        $this->tags       = new Collection;
-        $this->discounts  = new Collection;
-        $this->attributes = new Collection;
+        $this->sku = $sku;
+        $this->name = $name;
+        $this->price = $price;
+        $this->rate = $rate;
+        $this->quantity = 1;
+        $this->freebie = false;
+        $this->taxable = true;
+        $this->delivery = new Money(0, $price->getCurrency());
+        $this->coupons = new Collection();
+        $this->tags = new Collection();
+        $this->discounts = new Collection();
+        $this->attributes = new Collection();
     }
 
-    public function quantity($quantity)
+    /**
+     * @param  mixed $key
+     * @return mixed
+     */
+    public function __get($key)
+    {
+        if (\property_exists($this, $key)) {
+            return $this->{$key};
+        }
+
+        if ($this->attributes->has($key)) {
+            return $this->attributes->get($key);
+        }
+    }
+
+    public function quantity($quantity): void
     {
         $this->quantity = $quantity;
     }
 
-    public function increment()
+    public function increment(): void
     {
         $this->quantity++;
     }
 
-    public function decrement()
+    public function decrement(): void
     {
         $this->quantity--;
     }
 
-    public function freebie($status)
+    public function freebie($status): void
     {
         $this->freebie = $status;
     }
 
-    public function taxable($status)
+    public function taxable($status): void
     {
         $this->taxable = $status;
     }
@@ -118,31 +136,31 @@ final class Product
     /**
      * Set the tax rate.
      *
-     * @param  int  $rate
+     * @param int $rate
      */
-    public function rate($rate)
+    public function rate($rate): void
     {
         $this->rate = $rate;
     }
 
-    public function delivery(Money $delivery)
+    public function delivery(Money $delivery): void
     {
         if ($this->price->isSameCurrency($delivery)) {
             $this->delivery = $delivery;
         }
     }
 
-    public function coupon(Coupon $coupon)
+    public function coupon(Coupon $coupon): void
     {
         $this->coupons->push($coupon);
     }
 
-    public function tags($tag)
+    public function tags($tag): void
     {
         $this->tags->push($tag);
     }
 
-    public function discount(Discount $discount)
+    public function discount(Discount $discount): void
     {
         $this->discounts->add(0, $discount);
     }
@@ -150,37 +168,23 @@ final class Product
     /**
      * Add an attribute.
      *
-     * @param  string  $key
-     * @param  mixed  $value
+     * @param string $key
+     * @param mixed  $value
      */
-    public function attributes($key, $value)
+    public function attributes($key, $value): void
     {
         $this->attributes->add($key, $value);
     }
 
-    public function category(Category $category)
+    public function category(Category $category): void
     {
         $this->category = $category;
 
         $this->category->categorise($this);
     }
 
-    public function action(Closure $actions)
+    public function action(Closure $actions): void
     {
-        call_user_func($actions, $this);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function __get($key)
-    {
-        if (property_exists($this, $key)) {
-            return $this->$key;
-        }
-
-        if ($this->attributes->has($key)) {
-            return $this->attributes->get($key);
-        }
+        $actions($this);
     }
 }

@@ -15,11 +15,13 @@ final class Coupon
 
     /**
      * Coupon constructor.
+     *
+     * @param mixed $identifier
      */
     public function __construct($identifier)
     {
         $this->identifier = $identifier;
-        $this->discounts  = new Collection;
+        $this->discounts = new Collection();
     }
 
     /**
@@ -47,6 +49,7 @@ final class Coupon
     }
 
     /**
+     * @param  mixed $index
      * @return mixed
      */
     public function pick($index)
@@ -54,12 +57,12 @@ final class Coupon
         return $this->discounts->get($index);
     }
 
-    public function add($discount)
+    public function add($discount): void
     {
         $this->discounts->push($discount);
     }
 
-    public function remove($index)
+    public function remove($index): void
     {
         $this->discounts->remove($index);
     }
@@ -69,6 +72,6 @@ final class Coupon
      */
     public function serialize()
     {
-        return serialize($this);
+        return \serialize($this);
     }
 }

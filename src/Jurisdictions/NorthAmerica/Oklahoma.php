@@ -26,7 +26,7 @@ final class Oklahoma implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new OklahomaValueAddedTax;
+        $this->tax = new OklahomaValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

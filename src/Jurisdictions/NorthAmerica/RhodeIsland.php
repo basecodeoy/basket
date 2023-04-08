@@ -26,7 +26,7 @@ final class RhodeIsland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new RhodeIslandValueAddedTax;
+        $this->tax = new RhodeIslandValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

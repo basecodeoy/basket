@@ -26,7 +26,7 @@ final class Michigan implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new MichiganValueAddedTax;
+        $this->tax = new MichiganValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

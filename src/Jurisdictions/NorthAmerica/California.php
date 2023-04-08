@@ -26,7 +26,7 @@ final class California implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new CaliforniaValueAddedTax;
+        $this->tax = new CaliforniaValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

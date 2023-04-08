@@ -26,7 +26,7 @@ final class Wyoming implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new WyomingValueAddedTax;
+        $this->tax = new WyomingValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

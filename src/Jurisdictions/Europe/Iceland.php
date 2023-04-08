@@ -26,7 +26,7 @@ final class Iceland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new IcelandValueAddedTax;
+        $this->tax = new IcelandValueAddedTax();
         $this->currency = new Currency('ISK');
     }
 

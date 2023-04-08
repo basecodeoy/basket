@@ -26,7 +26,7 @@ final class Peru implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new PeruValueAddedTax;
+        $this->tax = new PeruValueAddedTax();
         $this->currency = new Currency('PEN');
     }
 

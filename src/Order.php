@@ -26,11 +26,11 @@ final class Order
     /**
      * Order constructor.
      *
-     * @param  Money\Money  $delivery
+     * @param Money\Money $delivery
      */
     public function __construct(array $meta, array $products, ?Money $delivery)
     {
-        $this->meta     = $meta;
+        $this->meta = $meta;
         $this->products = $products;
         $this->delivery = $delivery;
     }
@@ -64,6 +64,6 @@ final class Order
      */
     public function toArray()
     {
-        return array_merge($this->meta, ['products' => $this->products]);
+        return \array_merge($this->meta, ['products' => $this->products]);
     }
 }

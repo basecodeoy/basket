@@ -26,7 +26,7 @@ final class Montana implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new MontanaValueAddedTax;
+        $this->tax = new MontanaValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

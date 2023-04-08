@@ -26,7 +26,7 @@ final class France implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new FranceValueAddedTax;
+        $this->tax = new FranceValueAddedTax();
         $this->currency = new Currency('EUR');
     }
 

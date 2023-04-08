@@ -26,7 +26,7 @@ final class Maryland implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new MarylandValueAddedTax;
+        $this->tax = new MarylandValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

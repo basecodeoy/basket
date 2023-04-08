@@ -26,7 +26,7 @@ final class Arizona implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new AustriaValueAddedTax;
+        $this->tax = new AustriaValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

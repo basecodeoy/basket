@@ -26,7 +26,7 @@ final class Portugal implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new PortugalValueAddedTax;
+        $this->tax = new PortugalValueAddedTax();
         $this->currency = new Currency('EUR');
     }
 

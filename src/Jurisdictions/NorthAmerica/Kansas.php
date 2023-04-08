@@ -26,7 +26,7 @@ final class Kansas implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new KansasValueAddedTax;
+        $this->tax = new KansasValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

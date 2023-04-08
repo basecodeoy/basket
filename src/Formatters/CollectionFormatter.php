@@ -9,6 +9,7 @@ use PreemStudio\Basket\Contracts\Formatter;
 final class CollectionFormatter implements Formatter
 {
     /**
+     * @param  mixed $value
      * @return mixed
      */
     public function format($value): array

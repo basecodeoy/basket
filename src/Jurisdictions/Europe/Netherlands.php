@@ -26,7 +26,7 @@ final class Netherlands implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new NetherlandsValueAddedTax;
+        $this->tax = new NetherlandsValueAddedTax();
         $this->currency = new Currency('EUR');
     }
 

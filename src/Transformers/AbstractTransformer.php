@@ -35,7 +35,7 @@ abstract class AbstractTransformer implements Transformer
         $payload['products'] = [];
 
         foreach ($order->products() as $product) {
-            $payload['products'][] = array_map(function ($value) {
+            $payload['products'][] = \array_map(function ($value) {
                 return $this->converter->convert($value);
             }, $product);
         }

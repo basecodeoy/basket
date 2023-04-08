@@ -26,7 +26,7 @@ final class Venezuela implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new VenezuelaValueAddedTax;
+        $this->tax = new VenezuelaValueAddedTax();
         $this->currency = new Currency('VEF');
     }
 

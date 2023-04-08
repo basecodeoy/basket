@@ -26,7 +26,7 @@ final class WestVirginia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new WestVirginiaValueAddedTax;
+        $this->tax = new WestVirginiaValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

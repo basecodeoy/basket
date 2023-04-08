@@ -26,7 +26,7 @@ final class Ecuador implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new EcuadorValueAddedTax;
+        $this->tax = new EcuadorValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

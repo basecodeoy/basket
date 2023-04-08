@@ -17,7 +17,8 @@ final class XMLTransformer extends AbstractTransformer
     public function transform(Order $order): string
     {
         return (new SymfonySerialiser(
-            [new ObjectNormalizer], [new XmlEncoder]
-        ))->serialize(($this->build($order)), 'xml');
+            [new ObjectNormalizer()],
+            [new XmlEncoder()],
+        ))->serialize($this->build($order), 'xml');
     }
 }

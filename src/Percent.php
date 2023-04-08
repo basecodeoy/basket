@@ -10,6 +10,8 @@ final class Percent
 
     /**
      * Percent constructor.
+     *
+     * @param mixed $value
      */
     public function __construct($value)
     {

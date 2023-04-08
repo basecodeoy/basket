@@ -26,7 +26,7 @@ final class Delaware implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new DelawareValueAddedTax;
+        $this->tax = new DelawareValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

@@ -26,7 +26,7 @@ final class NewYork implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new NewYorkValueAddedTax;
+        $this->tax = new NewYorkValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

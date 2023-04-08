@@ -10,6 +10,6 @@ final class SerializeTransformer extends AbstractTransformer
 {
     public function transform(Order $order): string
     {
-        return serialize($this->build($order));
+        return \serialize($this->build($order));
     }
 }

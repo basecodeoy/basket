@@ -16,6 +16,8 @@ final class PercentageDiscount implements Discount, Percentage
 
     /**
      * PercentageDiscount constructor.
+     *
+     * @param mixed $rate
      */
     public function __construct($rate)
     {

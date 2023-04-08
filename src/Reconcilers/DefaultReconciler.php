@@ -28,7 +28,7 @@ final class DefaultReconciler implements Reconciler
         // "Global" Basket Discount
         foreach ($product->discounts as $discount) {
             $discountTotal = $discountTotal->add(
-                $discount->product($product)->multiply($product->quantity)
+                $discount->product($product)->multiply($product->quantity),
             );
         }
 
@@ -41,7 +41,7 @@ final class DefaultReconciler implements Reconciler
                 $discount = $discount->multiply($product->quantity);
 
                 // Add the discount to the discount total
-                $discount      = new Money($discount->getAmount(), $product->price->getCurrency());
+                $discount = new Money($discount->getAmount(), $product->price->getCurrency());
                 $discountTotal = $discountTotal->add($discount);
             }
         }
@@ -54,9 +54,7 @@ final class DefaultReconciler implements Reconciler
      */
     public function delivery(Product $product)
     {
-        $delivery = $product->delivery->multiply($product->quantity);
-
-        return $delivery;
+        return $product->delivery->multiply($product->quantity);
     }
 
     /**
@@ -66,17 +64,16 @@ final class DefaultReconciler implements Reconciler
     {
         $tax = $this->money($product);
 
-        if (! $product->taxable || $product->freebie) {
+        if (!$product->taxable || $product->freebie) {
             return $tax;
         }
 
-        $value    = $this->value($product);
+        $value = $this->value($product);
         $discount = $this->discount($product);
 
         $value = $value->subtract($discount);
-        $tax   = $value->multiply($product->rate->float());
 
-        return $tax;
+        return $value->multiply($product->rate->float());
     }
 
     /**
@@ -86,16 +83,15 @@ final class DefaultReconciler implements Reconciler
     {
         $subtotal = $this->money($product);
 
-        if (! $product->freebie) {
-            $value    = $this->value($product);
+        if (!$product->freebie) {
+            $value = $this->value($product);
             $discount = $this->discount($product);
             $subtotal = $subtotal->add($value)->subtract($discount);
         }
 
         $delivery = $this->delivery($product);
-        $subtotal = $subtotal->add($delivery);
 
-        return $subtotal;
+        return $subtotal->add($delivery);
     }
 
     /**
@@ -103,11 +99,10 @@ final class DefaultReconciler implements Reconciler
      */
     public function total(Product $product)
     {
-        $tax      = $this->tax($product);
+        $tax = $this->tax($product);
         $subtotal = $this->subtotal($product);
-        $total    = $subtotal->add($tax);
 
-        return $total;
+        return $subtotal->add($tax);
     }
 
     /**

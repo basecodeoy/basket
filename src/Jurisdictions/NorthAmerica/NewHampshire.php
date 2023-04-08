@@ -26,7 +26,7 @@ final class NewHampshire implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new NewHampshireValueAddedTax;
+        $this->tax = new NewHampshireValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

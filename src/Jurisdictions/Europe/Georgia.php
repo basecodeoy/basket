@@ -26,7 +26,7 @@ final class Georgia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new GeorgiaValueAddedTax;
+        $this->tax = new GeorgiaValueAddedTax();
         $this->currency = new Currency('GEL');
     }
 

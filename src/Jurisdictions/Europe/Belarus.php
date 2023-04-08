@@ -26,7 +26,7 @@ final class Belarus implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new BelarusValueAddedTax;
+        $this->tax = new BelarusValueAddedTax();
         $this->currency = new Currency('BYR');
     }
 

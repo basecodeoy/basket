@@ -26,7 +26,7 @@ final class Tennessee implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new TennesseeValueAddedTax;
+        $this->tax = new TennesseeValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

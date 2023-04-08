@@ -26,7 +26,7 @@ final class Missouri implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new MissouriValueAddedTax;
+        $this->tax = new MissouriValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

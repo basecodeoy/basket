@@ -26,7 +26,7 @@ final class Nevada implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new NevadaValueAddedTax;
+        $this->tax = new NevadaValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

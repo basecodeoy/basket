@@ -26,7 +26,7 @@ final class Indiana implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new IndianaValueAddedTax;
+        $this->tax = new IndianaValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

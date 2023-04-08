@@ -26,7 +26,7 @@ final class DistrictOfColumbia implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new DistrictOfColumbiaValueAddedTax;
+        $this->tax = new DistrictOfColumbiaValueAddedTax();
         $this->currency = new Currency('USD');
     }
 

@@ -26,7 +26,7 @@ final class Cyprus implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new CyprusValueAddedTax;
+        $this->tax = new CyprusValueAddedTax();
         $this->currency = new Currency('EUR');
     }
 

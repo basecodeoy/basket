@@ -25,7 +25,7 @@ final class Collection implements Countable, IteratorAggregate
         $this->items = $items;
     }
 
-    public function add($key, $value)
+    public function add($key, $value): void
     {
         $this->items[$key] = $value;
     }
@@ -39,29 +39,31 @@ final class Collection implements Countable, IteratorAggregate
     }
 
     /**
+     * @param  mixed $value
      * @return bool
      */
     public function contains($value)
     {
-        return in_array($value, $this->items);
+        return \in_array($value, $this->items, true);
     }
 
     /**
+     * @param  mixed $value
      * @return bool
      */
     public function containsKey($value)
     {
-        return array_key_exists($value, $this->items);
+        return \array_key_exists($value, $this->items);
     }
 
     public function count(): int
     {
-        return count($this->items);
+        return \count($this->items);
     }
 
-    public function each(Closure $callback)
+    public function each(Closure $callback): void
     {
-        array_map($callback, $this->items);
+        \array_map($callback, $this->items);
     }
 
     /**
@@ -77,13 +79,13 @@ final class Collection implements Countable, IteratorAggregate
      */
     public function filter(Closure $callback)
     {
-        return new self(array_filter($this->items, $callback));
+        return new self(\array_filter($this->items, $callback));
     }
 
     /**
      * Determine if an item exists in the collection by key.
      *
-     * @param  mixed  $key
+     * @param  mixed $key
      * @return bool
      */
     public function has($key)
@@ -94,12 +96,12 @@ final class Collection implements Countable, IteratorAggregate
     /**
      * Determine if an item exists at an offset.
      *
-     * @param  mixed  $key
+     * @param  mixed $key
      * @return bool
      */
     public function offsetExists($key)
     {
-        return array_key_exists($key, $this->items);
+        return \array_key_exists($key, $this->items);
     }
 
     /**
@@ -107,7 +109,7 @@ final class Collection implements Countable, IteratorAggregate
      */
     public function first()
     {
-        return reset($this->items);
+        return \reset($this->items);
     }
 
     /**
@@ -115,10 +117,11 @@ final class Collection implements Countable, IteratorAggregate
      */
     public function keys()
     {
-        return array_keys($this->items);
+        return \array_keys($this->items);
     }
 
     /**
+     * @param  mixed $key
      * @return mixed
      */
     public function get($key)
@@ -131,7 +134,7 @@ final class Collection implements Countable, IteratorAggregate
      */
     public function last()
     {
-        return end($this->items);
+        return \end($this->items);
     }
 
     /**
@@ -139,7 +142,7 @@ final class Collection implements Countable, IteratorAggregate
      */
     public function map(Closure $callback)
     {
-        return new self(array_map($callback, $this->items, array_keys($this->items)));
+        return new self(\array_map($callback, $this->items, \array_keys($this->items)));
     }
 
     /**
@@ -147,30 +150,31 @@ final class Collection implements Countable, IteratorAggregate
      */
     public function pop()
     {
-        return array_pop($this->items);
+        return \array_pop($this->items);
     }
 
-    public function prepend($value)
+    public function prepend($value): void
     {
-        array_unshift($this->items, $value);
+        \array_unshift($this->items, $value);
     }
 
-    public function push($value)
+    public function push($value): void
     {
         $this->items[] = $value;
     }
 
-    public function remove($key)
+    public function remove($key): void
     {
         unset($this->items[$key]);
     }
 
     /**
+     * @param  mixed $value
      * @return mixed
      */
     public function search($value)
     {
-        return array_search($value, $this->items, true);
+        return \array_search($value, $this->items, true);
     }
 
     /**
@@ -178,17 +182,17 @@ final class Collection implements Countable, IteratorAggregate
      */
     public function shift()
     {
-        return array_shift($this->items);
+        return \array_shift($this->items);
     }
 
-    public function sort(Closure $callback)
+    public function sort(Closure $callback): void
     {
-        uasort($this->items, $callback);
+        \uasort($this->items, $callback);
     }
 
-    public function values()
+    public function values(): void
     {
-        $this->items = array_values($this->items);
+        $this->items = \array_values($this->items);
     }
 
     /**

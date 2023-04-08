@@ -26,7 +26,7 @@ final class Romania implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new RomaniaValueAddedTax;
+        $this->tax = new RomaniaValueAddedTax();
         $this->currency = new Currency('RON');
     }
 

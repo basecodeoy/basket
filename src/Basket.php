@@ -30,9 +30,20 @@ final class Basket
      */
     public function __construct(Jurisdiction $jurisdiction)
     {
-        $this->rate     = $jurisdiction->rate();
+        $this->rate = $jurisdiction->rate();
         $this->currency = $jurisdiction->currency();
-        $this->products = new Collection;
+        $this->products = new Collection();
+    }
+
+    /**
+     * @param  mixed $key
+     * @return mixed
+     */
+    public function __get($key)
+    {
+        if (\property_exists($this, $key)) {
+            return $this->{$key};
+        }
     }
 
     /**
@@ -68,6 +79,7 @@ final class Basket
     }
 
     /**
+     * @param  mixed $sku
      * @return mixed
      */
     public function pick($sku)
@@ -75,26 +87,26 @@ final class Basket
         return $this->products->get($sku);
     }
 
-    public function add(Product $product)
+    public function add(Product $product): void
     {
         $this->products->add($product->sku, $product);
     }
 
-    public function update($sku, Closure $action)
+    public function update($sku, Closure $action): void
     {
         $product = $this->pick($sku);
 
         $product->action($action);
     }
 
-    public function remove($sku)
+    public function remove($sku): void
     {
         $product = $this->pick($sku);
 
         $this->products->remove($sku);
     }
 
-    public function flush()
+    public function flush(): void
     {
         foreach ($this->products as $product) {
             $this->remove($product->sku);
@@ -106,12 +118,12 @@ final class Basket
         return $this->products->containsKey($sku);
     }
 
-    public function discount(Discount $discount)
+    public function discount(Discount $discount): void
     {
         $this->discount = $discount;
     }
 
-    public function delivery(Money $delivery)
+    public function delivery(Money $delivery): void
     {
         $this->delivery = $delivery;
     }
@@ -122,15 +134,5 @@ final class Basket
     public function isEmpty()
     {
         return $this->products->isEmpty();
-    }
-
-    /**
-     * @return mixed
-     */
-    public function __get($key)
-    {
-        if (property_exists($this, $key)) {
-            return $this->$key;
-        }
     }
 }

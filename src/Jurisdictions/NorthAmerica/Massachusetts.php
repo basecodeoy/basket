@@ -26,7 +26,7 @@ final class Massachusetts implements Jurisdiction
      */
     public function __construct()
     {
-        $this->tax      = new MassachusettsValueAddedTax;
+        $this->tax = new MassachusettsValueAddedTax();
         $this->currency = new Currency('USD');
     }
 
