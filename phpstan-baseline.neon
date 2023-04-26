@@ -1,0 +1,806 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$sku\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^Cannot access property \\$sku on mixed\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^Cannot call method action\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Basket\\:\\:has\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Basket\\:\\:has\\(\\) has parameter \\$sku with no type specified\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Basket\\:\\:remove\\(\\) has parameter \\$sku with no type specified\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Basket\\:\\:update\\(\\) has parameter \\$sku with no type specified\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^PHPDoc tag @return with type mixed is not subtype of native type Money\\\\Currency\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^Parameter \\#2 \\$property of function property_exists expects string, mixed given\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Basket\\:\\:\\$currency has no type specified\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Basket\\:\\:\\$delivery has no type specified\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Basket\\:\\:\\$discount has no type specified\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Basket\\:\\:\\$rate has no type specified\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
+			message: "#^Class BombenProdukt\\\\Basket\\\\Collection implements generic interface IteratorAggregate but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Collection.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Collection\\:\\:add\\(\\) has parameter \\$key with no type specified\\.$#"
+			count: 1
+			path: src/Collection.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Collection\\:\\:add\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: src/Collection.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Collection\\:\\:getIterator\\(\\) return type with generic class ArrayIterator does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Collection.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Collection\\:\\:prepend\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: src/Collection.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Collection\\:\\:push\\(\\) has parameter \\$value with no type specified\\.$#"
+			count: 1
+			path: src/Collection.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Collection\\:\\:remove\\(\\) has parameter \\$key with no type specified\\.$#"
+			count: 1
+			path: src/Collection.php
+
+		-
+			message: "#^Parameter \\#1 \\$key of function array_key_exists expects int\\|string, mixed given\\.$#"
+			count: 2
+			path: src/Collection.php
+
+		-
+			message: "#^Argument of an invalid type array\\<string, class\\-string\\>\\|false supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Converter.php
+
+		-
+			message: "#^Cannot access constant class on mixed\\.$#"
+			count: 1
+			path: src/Converter.php
+
+		-
+			message: "#^Cannot call method format\\(\\) on mixed\\.$#"
+			count: 2
+			path: src/Converter.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Converter\\:\\:convert\\(\\) should return array but returns mixed\\.$#"
+			count: 1
+			path: src/Converter.php
+
+		-
+			message: "#^Parameter \\#1 \\$object_or_class of function class_implements expects object\\|string, mixed given\\.$#"
+			count: 1
+			path: src/Converter.php
+
+		-
+			message: "#^Parameter \\#2 \\$string of function explode expects string, mixed given\\.$#"
+			count: 1
+			path: src/Converter.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Coupon\\:\\:add\\(\\) has parameter \\$discount with no type specified\\.$#"
+			count: 1
+			path: src/Coupon.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Coupon\\:\\:remove\\(\\) has parameter \\$index with no type specified\\.$#"
+			count: 1
+			path: src/Coupon.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Coupon\\:\\:\\$identifier has no type specified\\.$#"
+			count: 1
+			path: src/Coupon.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$price\\.$#"
+			count: 1
+			path: src/Discounts/PercentageDiscount.php
+
+		-
+			message: "#^PHPDoc tag @return with type mixed is not subtype of native type Money\\\\Money\\.$#"
+			count: 1
+			path: src/Discounts/PercentageDiscount.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Discounts\\\\PercentageDiscount\\:\\:\\$rate has no type specified\\.$#"
+			count: 1
+			path: src/Discounts/PercentageDiscount.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$price\\.$#"
+			count: 1
+			path: src/Discounts/QuantityDiscount.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$quantity\\.$#"
+			count: 1
+			path: src/Discounts/QuantityDiscount.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Discounts\\\\QuantityDiscount\\:\\:product\\(\\) should return Money\\\\Money but returns mixed\\.$#"
+			count: 1
+			path: src/Discounts/QuantityDiscount.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Discounts\\\\QuantityDiscount\\:\\:\\$quantity has no type specified\\.$#"
+			count: 1
+			path: src/Discounts/QuantityDiscount.php
+
+		-
+			message: "#^Cannot access constant class on mixed\\.$#"
+			count: 1
+			path: src/Formatters/CategoryFormatter.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Formatters\\\\CategoryFormatter\\:\\:format\\(\\) should return string but returns string\\|null\\.$#"
+			count: 1
+			path: src/Formatters/CategoryFormatter.php
+
+		-
+			message: "#^PHPDoc tag @return with type mixed is not subtype of native type string\\.$#"
+			count: 1
+			path: src/Formatters/CategoryFormatter.php
+
+		-
+			message: "#^Cannot call method toArray\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Formatters/CollectionFormatter.php
+
+		-
+			message: "#^PHPDoc tag @return with type mixed is not subtype of native type array\\.$#"
+			count: 1
+			path: src/Formatters/CollectionFormatter.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Formatters/CouponFormatter.php
+
+		-
+			message: "#^Cannot call method identifier\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Formatters/CouponFormatter.php
+
+		-
+			message: "#^Call to method toMoney\\(\\) on an unknown class BombenProdukt\\\\Basket\\\\Money\\.$#"
+			count: 1
+			path: src/Formatters/MoneyFormatter.php
+
+		-
+			message: "#^Class BombenProdukt\\\\Basket\\\\Money not found\\.$#"
+			count: 1
+			path: src/Formatters/MoneyFormatter.php
+
+		-
+			message: "#^Function json_read not found\\.$#"
+			count: 1
+			path: src/Formatters/MoneyFormatter.php
+
+		-
+			message: "#^If condition is always false\\.$#"
+			count: 1
+			path: src/Formatters/MoneyFormatter.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Formatters\\\\MoneyFormatter\\:\\:format\\(\\) should return string but returns string\\|false\\.$#"
+			count: 1
+			path: src/Formatters/MoneyFormatter.php
+
+		-
+			message: "#^PHPDoc tag @return with type mixed is not subtype of native type int\\.$#"
+			count: 1
+			path: src/Formatters/MoneyFormatter.php
+
+		-
+			message: "#^PHPDoc tag @return with type mixed is not subtype of native type string\\.$#"
+			count: 1
+			path: src/Formatters/MoneyFormatter.php
+
+		-
+			message: "#^PHPDoc tag @return with type string is incompatible with native type float\\.$#"
+			count: 1
+			path: src/Formatters/MoneyFormatter.php
+
+		-
+			message: "#^PHPDoc tag @return with type string\\|null is not subtype of native type string\\.$#"
+			count: 1
+			path: src/Formatters/MoneyFormatter.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Formatters\\\\MoneyFormatter\\:\\:\\$currencies has no type specified\\.$#"
+			count: 1
+			path: src/Formatters/MoneyFormatter.php
+
+		-
+			message: "#^Cannot call method int\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Formatters/PercentFormatter.php
+
+		-
+			message: "#^Cannot call method rate\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Formatters/QuantityFormatter.php
+
+		-
+			message: "#^Class BombenProdukt\\\\Basket\\\\Formatters\\\\PercentFormatter does not have a constructor and must be instantiated without any parameters\\.$#"
+			count: 1
+			path: src/Formatters/QuantityFormatter.php
+
+		-
+			message: "#^Cannot call method percentage\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Formatters/TaxRateFormatter.php
+
+		-
+			message: "#^Instantiated class BombenProdukt\\\\Basket\\\\TaxRates\\\\AustraliaValueAddedTax not found\\.$#"
+			count: 1
+			path: src/Jurisdictions/Australia/Australia.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Jurisdictions\\\\Australia\\\\Australia\\:\\:rate\\(\\) has invalid return type BombenProdukt\\\\Basket\\\\TaxRates\\\\AustraliaValueAddedTax\\.$#"
+			count: 1
+			path: src/Jurisdictions/Australia/Australia.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Jurisdictions\\\\Australia\\\\Australia\\:\\:rate\\(\\) should return BombenProdukt\\\\Basket\\\\Contracts\\\\TaxRate but returns BombenProdukt\\\\Basket\\\\TaxRates\\\\AustraliaValueAddedTax\\.$#"
+			count: 1
+			path: src/Jurisdictions/Australia/Australia.php
+
+		-
+			message: "#^PHPDoc tag @return with type BombenProdukt\\\\Basket\\\\TaxRates\\\\AustraliaValueAddedTax is not subtype of native type BombenProdukt\\\\Basket\\\\Contracts\\\\TaxRate\\.$#"
+			count: 1
+			path: src/Jurisdictions/Australia/Australia.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Jurisdictions\\\\Australia\\\\Australia\\:\\:\\$tax has unknown class BombenProdukt\\\\Basket\\\\TaxRates\\\\AustraliaValueAddedTax as its type\\.$#"
+			count: 1
+			path: src/Jurisdictions/Australia/Australia.php
+
+		-
+			message: "#^Instantiated class BombenProdukt\\\\Basket\\\\TaxRates\\\\NorthAmerica\\\\AustriaValueAddedTax not found\\.$#"
+			count: 1
+			path: src/Jurisdictions/NorthAmerica/Arizona.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Jurisdictions\\\\NorthAmerica\\\\Arizona\\:\\:rate\\(\\) has invalid return type BombenProdukt\\\\Basket\\\\TaxRates\\\\NorthAmerica\\\\AustriaValueAddedTax\\.$#"
+			count: 1
+			path: src/Jurisdictions/NorthAmerica/Arizona.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Jurisdictions\\\\NorthAmerica\\\\Arizona\\:\\:rate\\(\\) should return BombenProdukt\\\\Basket\\\\Contracts\\\\TaxRate but returns BombenProdukt\\\\Basket\\\\TaxRates\\\\NorthAmerica\\\\AustriaValueAddedTax\\.$#"
+			count: 1
+			path: src/Jurisdictions/NorthAmerica/Arizona.php
+
+		-
+			message: "#^PHPDoc tag @return with type BombenProdukt\\\\Basket\\\\TaxRates\\\\NorthAmerica\\\\AustriaValueAddedTax is not subtype of native type BombenProdukt\\\\Basket\\\\Contracts\\\\TaxRate\\.$#"
+			count: 1
+			path: src/Jurisdictions/NorthAmerica/Arizona.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Jurisdictions\\\\NorthAmerica\\\\Arizona\\:\\:\\$tax has unknown class BombenProdukt\\\\Basket\\\\TaxRates\\\\NorthAmerica\\\\AustriaValueAddedTax as its type\\.$#"
+			count: 1
+			path: src/Jurisdictions/NorthAmerica/Arizona.php
+
+		-
+			message: "#^Class BombenProdukt\\\\Basket\\\\TaxRates\\\\NorthAmerica\\\\DistrictofColumbiaValueAddedTax referenced with incorrect case\\: BombenProdukt\\\\Basket\\\\TaxRates\\\\NorthAmerica\\\\DistrictOfColumbiaValueAddedTax\\.$#"
+			count: 4
+			path: src/Jurisdictions/NorthAmerica/DistrictOfColumbia.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Basket\\:\\:\\$delivery\\.$#"
+			count: 2
+			path: src/MetaData/DeliveryMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:delivery\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/DeliveryMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$addends of method Money\\\\Money\\:\\:add\\(\\) expects Money\\\\Money, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/DeliveryMetaData.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Basket\\:\\:\\$discount\\.$#"
+			count: 1
+			path: src/MetaData/DiscountMetaData.php
+
+		-
+			message: "#^Call to an undefined method BombenProdukt\\\\Basket\\\\Discounts\\\\PercentageDiscount\\:\\:int\\(\\)\\.$#"
+			count: 1
+			path: src/MetaData/DiscountMetaData.php
+
+		-
+			message: "#^Cannot access property \\$quantity on mixed\\.$#"
+			count: 2
+			path: src/MetaData/DiscountMetaData.php
+
+		-
+			message: "#^Cannot call method int\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/MetaData/DiscountMetaData.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\MetaData\\\\DiscountMetaData\\:\\:calculateTotalWithDiscount\\(\\) should return Money\\\\Money but returns BombenProdukt\\\\Basket\\\\Discounts\\\\ValueDiscount\\.$#"
+			count: 1
+			path: src/MetaData/DiscountMetaData.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$discount with type BombenProdukt\\\\Basket\\\\Basket is incompatible with native type BombenProdukt\\\\Basket\\\\Contracts\\\\Discount\\.$#"
+			count: 1
+			path: src/MetaData/DiscountMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:discount\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/DiscountMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:total\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/DiscountMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$addends of method Money\\\\Money\\:\\:add\\(\\) expects Money\\\\Money, mixed given\\.$#"
+			count: 2
+			path: src/MetaData/DiscountMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$subtrahends of method Money\\\\Money\\:\\:subtract\\(\\) expects Money\\\\Money, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/DiscountMetaData.php
+
+		-
+			message: "#^Cannot access property \\$quantity on mixed\\.$#"
+			count: 1
+			path: src/MetaData/ProductsMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:subtotal\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/SubtotalMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$addends of method Money\\\\Money\\:\\:add\\(\\) expects Money\\\\Money, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/SubtotalMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:tax\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/TaxMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$addends of method Money\\\\Money\\:\\:add\\(\\) expects Money\\\\Money, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/TaxMetaData.php
+
+		-
+			message: "#^Cannot access property \\$quantity on mixed\\.$#"
+			count: 1
+			path: src/MetaData/TaxableMetaData.php
+
+		-
+			message: "#^Cannot access property \\$taxable on mixed\\.$#"
+			count: 1
+			path: src/MetaData/TaxableMetaData.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Basket\\:\\:\\$delivery\\.$#"
+			count: 2
+			path: src/MetaData/TotalMetaData.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Basket\\:\\:\\$discount\\.$#"
+			count: 1
+			path: src/MetaData/TotalMetaData.php
+
+		-
+			message: "#^Call to an undefined method BombenProdukt\\\\Basket\\\\Discounts\\\\PercentageDiscount\\:\\:int\\(\\)\\.$#"
+			count: 1
+			path: src/MetaData/TotalMetaData.php
+
+		-
+			message: "#^Cannot access property \\$quantity on mixed\\.$#"
+			count: 2
+			path: src/MetaData/TotalMetaData.php
+
+		-
+			message: "#^Cannot call method int\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/MetaData/TotalMetaData.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\MetaData\\\\TotalMetaData\\:\\:calculateTotalWithDiscount\\(\\) should return Money\\\\Money but returns BombenProdukt\\\\Basket\\\\Discounts\\\\ValueDiscount\\.$#"
+			count: 1
+			path: src/MetaData/TotalMetaData.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$discount with type BombenProdukt\\\\Basket\\\\Basket is incompatible with native type BombenProdukt\\\\Basket\\\\Contracts\\\\Discount\\.$#"
+			count: 1
+			path: src/MetaData/TotalMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:total\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 2
+			path: src/MetaData/TotalMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$addends of method Money\\\\Money\\:\\:add\\(\\) expects Money\\\\Money, mixed given\\.$#"
+			count: 2
+			path: src/MetaData/TotalMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$subtrahends of method Money\\\\Money\\:\\:subtract\\(\\) expects Money\\\\Money, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/TotalMetaData.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Basket\\:\\:\\$delivery\\.$#"
+			count: 2
+			path: src/MetaData/ValueMetaData.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Basket\\:\\:\\$discount\\.$#"
+			count: 1
+			path: src/MetaData/ValueMetaData.php
+
+		-
+			message: "#^Call to an undefined method BombenProdukt\\\\Basket\\\\Discounts\\\\PercentageDiscount\\:\\:int\\(\\)\\.$#"
+			count: 1
+			path: src/MetaData/ValueMetaData.php
+
+		-
+			message: "#^Cannot access property \\$quantity on mixed\\.$#"
+			count: 2
+			path: src/MetaData/ValueMetaData.php
+
+		-
+			message: "#^Cannot call method int\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/MetaData/ValueMetaData.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\MetaData\\\\ValueMetaData\\:\\:calculateTotalWithDiscount\\(\\) should return Money\\\\Money but returns BombenProdukt\\\\Basket\\\\Discounts\\\\ValueDiscount\\.$#"
+			count: 1
+			path: src/MetaData/ValueMetaData.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$discount with type BombenProdukt\\\\Basket\\\\Basket is incompatible with native type BombenProdukt\\\\Basket\\\\Contracts\\\\Discount\\.$#"
+			count: 1
+			path: src/MetaData/ValueMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:total\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/ValueMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:value\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/ValueMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$addends of method Money\\\\Money\\:\\:add\\(\\) expects Money\\\\Money, mixed given\\.$#"
+			count: 2
+			path: src/MetaData/ValueMetaData.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$subtrahends of method Money\\\\Money\\:\\:subtract\\(\\) expects Money\\\\Money, mixed given\\.$#"
+			count: 1
+			path: src/MetaData/ValueMetaData.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Order\\:\\:delivery\\(\\) has invalid return type Money\\\\Money\\\\Money\\.$#"
+			count: 1
+			path: src/Order.php
+
+		-
+			message: "#^PHPDoc tag @param for parameter \\$delivery with type Money\\\\Money\\\\Money is not subtype of native type Money\\\\Money\\|null\\.$#"
+			count: 1
+			path: src/Order.php
+
+		-
+			message: "#^Parameter \\$delivery of method BombenProdukt\\\\Basket\\\\Order\\:\\:__construct\\(\\) has invalid type Money\\\\Money\\\\Money\\.$#"
+			count: 1
+			path: src/Order.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Order\\:\\:\\$delivery \\(Money\\\\Money\\\\Money\\) does not accept Money\\\\Money\\|null\\.$#"
+			count: 1
+			path: src/Order.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Order\\:\\:\\$delivery has unknown class Money\\\\Money\\\\Money as its type\\.$#"
+			count: 1
+			path: src/Order.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Percent\\:\\:\\$value has no type specified\\.$#"
+			count: 1
+			path: src/Percent.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Basket\\:\\:\\$delivery\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$attributes on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$category on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$coupons on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$delivery on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$discounts on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$freebie on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$name on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$price on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$quantity on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$rate on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$sku on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$tags on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Cannot access property \\$taxable on mixed\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:delivery\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:discount\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:subtotal\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:tax\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:total\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Parameter \\#1 \\$product of method BombenProdukt\\\\Basket\\\\Contracts\\\\Reconciler\\:\\:value\\(\\) expects BombenProdukt\\\\Basket\\\\Product, mixed given\\.$#"
+			count: 1
+			path: src/Processor.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Product\\:\\:freebie\\(\\) has parameter \\$status with no type specified\\.$#"
+			count: 1
+			path: src/Product.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Product\\:\\:quantity\\(\\) has parameter \\$quantity with no type specified\\.$#"
+			count: 1
+			path: src/Product.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Product\\:\\:tags\\(\\) has parameter \\$tag with no type specified\\.$#"
+			count: 1
+			path: src/Product.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Product\\:\\:taxable\\(\\) has parameter \\$status with no type specified\\.$#"
+			count: 1
+			path: src/Product.php
+
+		-
+			message: "#^Parameter \\#2 \\$property of function property_exists expects string, mixed given\\.$#"
+			count: 1
+			path: src/Product.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$category \\(string\\) does not accept BombenProdukt\\\\Basket\\\\Contracts\\\\Category\\.$#"
+			count: 1
+			path: src/Product.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$name has no type specified\\.$#"
+			count: 1
+			path: src/Product.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$rate \\(BombenProdukt\\\\Basket\\\\Contracts\\\\TaxRate\\) does not accept int\\.$#"
+			count: 1
+			path: src/Product.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$sku has no type specified\\.$#"
+			count: 1
+			path: src/Product.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$coupons\\.$#"
+			count: 1
+			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$delivery\\.$#"
+			count: 1
+			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$discounts\\.$#"
+			count: 1
+			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$freebie\\.$#"
+			count: 2
+			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$price\\.$#"
+			count: 3
+			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$quantity\\.$#"
+			count: 4
+			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$rate\\.$#"
+			count: 1
+			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Access to private property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$taxable\\.$#"
+			count: 1
+			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Cannot call method discounts\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Cannot call method product\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Cannot call method subtract\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$addends of method Money\\\\Money\\:\\:add\\(\\) expects Money\\\\Money, mixed given\\.$#"
+			count: 2
+			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Transformers\\\\JSONTransformer\\:\\:transform\\(\\) should return string but returns string\\|false\\.$#"
+			count: 1
+			path: src/Transformers/JSONTransformer.php
+
+		-
+			message: "#^PHPDoc tag @return with type mixed is not subtype of native type string\\.$#"
+			count: 1
+			path: src/Transformers/JSONTransformer.php
+
+		-
+			message: "#^PHPDoc tag @return with type mixed is not subtype of native type string\\.$#"
+			count: 1
+			path: src/Transformers/XMLTransformer.php
+
+		-
+			message: "#^Parameter \\#2 \\$inline of method Symfony\\\\Component\\\\Yaml\\\\Dumper\\:\\:dump\\(\\) expects int, true given\\.$#"
+			count: 1
+			path: src/Transformers/YAMLInlineTransformer.php
