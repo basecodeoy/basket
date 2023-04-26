@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket\Reconcilers;
 
-use Money\Money;
 use BombenProdukt\Basket\Contracts\Reconciler;
 use BombenProdukt\Basket\Product;
+use Money\Money;
 
 final class DefaultReconciler implements Reconciler
 {

@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket\MetaData\Traits;
 
-use Money\Money;
 use BombenProdukt\Basket\Basket;
 use BombenProdukt\Basket\Contracts\Discount;
 use BombenProdukt\Basket\Discounts\PercentageDiscount;
 use BombenProdukt\Basket\Discounts\QuantityDiscount;
 use BombenProdukt\Basket\Discounts\ValueDiscount;
+use Money\Money;
 
 trait ApplyDiscount
 {

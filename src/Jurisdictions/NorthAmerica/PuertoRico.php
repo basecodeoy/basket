@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket\Jurisdictions\NorthAmerica;
 
-use Money\Currency;
 use BombenProdukt\Basket\Contracts\Jurisdiction;
 use BombenProdukt\Basket\Contracts\TaxRate;
 use BombenProdukt\Basket\TaxRates\NorthAmerica\PuertoRicoValueAddedTax;
+use Money\Currency;
 
 final class PuertoRico implements Jurisdiction
 {

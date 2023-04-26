@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket\Jurisdictions;
 
-use Money\Currency;
 use BombenProdukt\Basket\Contracts\Jurisdiction;
 use BombenProdukt\Basket\TaxRates\TaxFreeValueAddedTax;
+use Money\Currency;
 
 final class TaxFree implements Jurisdiction
 {

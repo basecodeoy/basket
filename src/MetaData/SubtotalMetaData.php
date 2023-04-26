@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket\MetaData;
 
-use Money\Money;
 use BombenProdukt\Basket\Basket;
 use BombenProdukt\Basket\Contracts\MetaData;
 use BombenProdukt\Basket\Contracts\Reconciler;
+use Money\Money;
 
 final class SubtotalMetaData implements MetaData
 {

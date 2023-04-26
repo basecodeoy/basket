@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket\Formatters;
 
-use Locale;
-use Money\Money;
-use NumberFormatter;
 use BombenProdukt\Basket\Contracts\Formatter;
 use BombenProdukt\Basket\Discounts\ValueDiscount;
 use BombenProdukt\Basket\Money as MoneyInterface;
+use Locale;
+use Money\Money;
+use NumberFormatter;
 
 final class MoneyFormatter implements Formatter
 {

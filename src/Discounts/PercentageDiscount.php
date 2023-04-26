@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket\Discounts;
 
-use Money\Money;
 use BombenProdukt\Basket\Contracts\Discount;
 use BombenProdukt\Basket\Contracts\Percentage;
 use BombenProdukt\Basket\Percent;
 use BombenProdukt\Basket\Product;
+use Money\Money;
 
 final class PercentageDiscount implements Discount, Percentage
 {

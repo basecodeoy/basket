@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket\Jurisdictions\SouthAmerica;
 
-use Money\Currency;
 use BombenProdukt\Basket\Contracts\Jurisdiction;
 use BombenProdukt\Basket\Contracts\TaxRate;
 use BombenProdukt\Basket\TaxRates\SouthAmerica\ChileValueAddedTax;
+use Money\Currency;
 
 final class Chile implements Jurisdiction
 {

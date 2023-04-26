@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket;
 
-use Closure;
-use Money\Money;
 use BombenProdukt\Basket\Contracts\Category;
 use BombenProdukt\Basket\Contracts\Discount;
 use BombenProdukt\Basket\Contracts\TaxRate;
+use Closure;
+use Money\Money;
 
 final class Product
 {

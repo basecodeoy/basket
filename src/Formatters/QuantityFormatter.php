@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket\Formatters;
 
-use Carbon\Exceptions\InvalidTypeException;
 use BombenProdukt\Basket\Contracts\Formatter;
 use BombenProdukt\Basket\Discounts\PercentageDiscount;
 use BombenProdukt\Basket\Discounts\ValueDiscount;
+use Carbon\Exceptions\InvalidTypeException;
 
 final class QuantityFormatter implements Formatter
 {

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket\Discounts;
 
-use Money\Money;
 use BombenProdukt\Basket\Contracts\Discount;
 use BombenProdukt\Basket\Contracts\Money as MoneyInterface;
 use BombenProdukt\Basket\Product;
+use Money\Money;
 
 final class ValueDiscount implements Discount, MoneyInterface
 {

@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket;
 
+use BombenProdukt\Basket\Contracts\Discount;
+use BombenProdukt\Basket\Contracts\Jurisdiction;
 use Closure;
 use Money\Currency;
 use Money\Money;
-use BombenProdukt\Basket\Contracts\Discount;
-use BombenProdukt\Basket\Contracts\Jurisdiction;
 
 final class Basket
 {

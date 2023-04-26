@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Basket\Jurisdictions\Europe;
 
-use Money\Currency;
 use BombenProdukt\Basket\Contracts\Jurisdiction;
 use BombenProdukt\Basket\Contracts\TaxRate;
 use BombenProdukt\Basket\TaxRates\Europe\NetherlandsValueAddedTax;
+use Money\Currency;
 
 final class Netherlands implements Jurisdiction
 {
