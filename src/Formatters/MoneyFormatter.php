@@ -13,12 +13,12 @@ use NumberFormatter;
 
 final class MoneyFormatter implements Formatter
 {
+    private static $currencies;
+
     /**
      * @var null
      */
     private $locale;
-
-    private static $currencies;
 
     /**
      * MoneyFormatter constructor.
