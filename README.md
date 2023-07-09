@@ -4,20 +4,6 @@
     </a>
 </p>
 
-<p align="center">
-    <a href="https://github.com/faustbrian/basket/actions">
-        <img src="https://badge.sh/github/check-runs/BombenProdukt/basket" alt="Checks" />
-    </a>
-    <a href="https://packagist.org/packages/bombenprodukt/basket">
-        <img src="https://badge.sh/packagist/downloads/BombenProdukt/basket" alt="Downloads" />
-    </a>
-    <a href="https://packagist.org/packages/bombenprodukt/basket">
-        <img src="https://badge.sh/packagist/version/BombenProdukt/basket" alt="Version" />
-    </a>
-    <a href="https://packagist.org/packages/bombenprodukt/basket">
-        <img src="https://badge.sh/packagist/license/BombenProdukt/basket" alt="License" />
-    </a>
-</p>
 
 ## About Basket
 
