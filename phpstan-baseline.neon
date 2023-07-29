@@ -16,6 +16,11 @@ parameters:
 			path: src/Basket.php
 
 		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Basket\\:\\:__get\\(\\) should return mixed but return statement is missing\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
 			message: "#^Method BombenProdukt\\\\Basket\\\\Basket\\:\\:has\\(\\) has no return type specified\\.$#"
 			count: 1
 			path: src/Basket.php
@@ -66,7 +71,17 @@ parameters:
 			path: src/Basket.php
 
 		-
+			message: "#^Variable property access on \\$this\\(BombenProdukt\\\\Basket\\\\Basket\\)\\.$#"
+			count: 1
+			path: src/Basket.php
+
+		-
 			message: "#^Class BombenProdukt\\\\Basket\\\\Collection implements generic interface IteratorAggregate but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Collection.php
+
+		-
+			message: "#^Construct empty\\(\\) is not allowed\\. Use more strict comparison\\.$#"
 			count: 1
 			path: src/Collection.php
 
@@ -242,6 +257,11 @@ parameters:
 
 		-
 			message: "#^Method BombenProdukt\\\\Basket\\\\Formatters\\\\MoneyFormatter\\:\\:format\\(\\) should return string but returns string\\|false\\.$#"
+			count: 1
+			path: src/Formatters/MoneyFormatter.php
+
+		-
+			message: "#^Only booleans are allowed in an if condition, null given\\.$#"
 			count: 1
 			path: src/Formatters/MoneyFormatter.php
 
@@ -681,6 +701,11 @@ parameters:
 			path: src/Processor.php
 
 		-
+			message: "#^Method BombenProdukt\\\\Basket\\\\Product\\:\\:__get\\(\\) should return mixed but return statement is missing\\.$#"
+			count: 1
+			path: src/Product.php
+
+		-
 			message: "#^Method BombenProdukt\\\\Basket\\\\Product\\:\\:freebie\\(\\) has parameter \\$status with no type specified\\.$#"
 			count: 1
 			path: src/Product.php
@@ -722,6 +747,11 @@ parameters:
 
 		-
 			message: "#^Property BombenProdukt\\\\Basket\\\\Product\\:\\:\\$sku has no type specified\\.$#"
+			count: 1
+			path: src/Product.php
+
+		-
+			message: "#^Variable property access on \\$this\\(BombenProdukt\\\\Basket\\\\Product\\)\\.$#"
 			count: 1
 			path: src/Product.php
 
@@ -784,6 +814,11 @@ parameters:
 			message: "#^Parameter \\#1 \\.\\.\\.\\$addends of method Money\\\\Money\\:\\:add\\(\\) expects Money\\\\Money, mixed given\\.$#"
 			count: 2
 			path: src/Reconcilers/DefaultReconciler.php
+
+		-
+			message: "#^Implicit array creation is not allowed \\- variable \\$payload might not exist\\.$#"
+			count: 2
+			path: src/Transformers/AbstractTransformer.php
 
 		-
 			message: "#^Method BombenProdukt\\\\Basket\\\\Transformers\\\\JSONTransformer\\:\\:transform\\(\\) should return string but returns string\\|false\\.$#"
